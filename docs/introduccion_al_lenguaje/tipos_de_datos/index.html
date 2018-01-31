@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Tipos de Datos en Swift | Swift en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Tipos de Datos en Swift" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Lista de Tipos de Datos" />
+<meta property="og:description" content="Lista de Tipos de Datos" />
+<link rel="canonical" href="https://docs.jekyll.plus/docs/introduccion_al_lenguaje/tipos_de_datos/" />
+<meta property="og:url" content="https://docs.jekyll.plus/docs/introduccion_al_lenguaje/tipos_de_datos/" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-31T17:32:47-06:00" />
+<script type="application/ld+json">
+{"description":"Lista de Tipos de Datos","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://docs.jekyll.plus/docs/introduccion_al_lenguaje/tipos_de_datos/","headline":"Tipos de Datos en Swift","dateModified":"2018-01-31T17:32:47-06:00","datePublished":"2018-01-31T17:32:47-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.jekyll.plus/docs/introduccion_al_lenguaje/tipos_de_datos/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.jekyll.plus/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/docs/index"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/index/">Bienvenida</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Básico</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Introducción a Swift</a></li>
+                    
+                      
+                      
+                      <li class="uk-active"><a href="/docs/introduccion_al_lenguaje/tipos_de_datos/">Tipos de Datos en Swift</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/variables/">Variables</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/constantes/">Constantes</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/arrays/">Arrays</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/funciones/">Funciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/tuplas/">Tuplas</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Intermedio</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/switch/">Switch</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/guard/">guard</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/where/">where</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/enumeraciones/">Enumeraciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/opcionales/">Opcionales</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/estructuras/">Estructuras</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Extras</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/extras/lista_de_palabras_reservadas/">Lista de Palabras Reservadas</a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Tipos de Datos en Swift</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+    <img class="avatar avatar-small" src="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32" alt="OscarSwanros" srcset="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32 1x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=64 2x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=96 3x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=128 4x" width="32" height="32" data-proofer-ignore="true" />
+
+
+
+    Actualiado por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Oscar Swanros</span></span><br>
+
+
+<time datetime="2018-01-31T17:32:47-06:00" itemprop="datePublished">
+    
+    Jan 31, 2018
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <h2 class="no_toc" id="lista-de-tipos-de-datos">Lista de Tipos de Datos</h2>
+<ul id="markdown-toc">
+  <li><a href="#int" id="markdown-toc-int">Int</a></li>
+  <li><a href="#float" id="markdown-toc-float">Float</a></li>
+  <li><a href="#double" id="markdown-toc-double">Double</a></li>
+</ul>
+
+<p>El poder de todo lenguaje nace a partir de los tipos de datos que tiene disponible. Son estos tipos de datos los que nos van a ayudar a representar ultimadamente la información y el flujo de nuestro programa.</p>
+
+<hr />
+
+<h2 id="int">Int</h2>
+
+<p>Un valor de tipo <code class="highlighter-rouge">Int</code> representa un número entero, que puede tener un signo positivo o negativo. Hay una variante de este tipo de dato que solamente representa números positivos: <code class="highlighter-rouge">UInt</code>.</p>
+
+<p><code class="highlighter-rouge">Int</code> también tiene variaciones específicas para representar enteros en plataformas con diferentes arquitecturas: <code class="highlighter-rouge">Int32</code>/<code class="highlighter-rouge">UInt32</code> para plataformas de 32 bits, y <code class="highlighter-rouge">Int64</code>/<code class="highlighter-rouge">UInt64</code> para plataformas de 64 bits.</p>
+
+<p>Sin embargo, no debes de preocuparte por esto, ya que:</p>
+
+<ul>
+  <li>En plataformas de 32 bits, <code class="highlighter-rouge">Int</code> tendrá el mismo tamaño que <code class="highlighter-rouge">Int32</code></li>
+  <li>En plataformas de 64 bits, <code class="highlighter-rouge">Int</code> tendrá el mismo tamaño que <code class="highlighter-rouge">UInt64</code></li>
+</ul>
+
+<p>Lo anterior es cierto tambíen para <code class="highlighter-rouge">UInt</code> y sus variantes.</p>
+
+<h3 class="no_toc" id="representación-literal">Representación literal</h3>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">dedosEnLaMano</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">let</span> <span class="nv">autosEnLaCochera</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">let</span> <span class="nv">estrellasEnElCielo</span> <span class="o">=</span> <span class="mi">1_000_000</span> <span class="c1">// Puedes usar _ entre números para mejorar la legibilidad</span>
+</code></pre>
+</div>
+
+<p>También puedes representar números binarios, octales y hexadecimales con lietarles en Swift:</p>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">decimal</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="k">let</span> <span class="nv">binario</span> <span class="o">=</span> <span class="mb">0b10001</span>       <span class="c1">// 17 en notación binaria</span>
+<span class="k">let</span> <span class="nv">octal</span> <span class="o">=</span> <span class="mi">0</span><span class="n">o21</span>            <span class="c1">// 17 en notación octal</span>
+<span class="k">let</span> <span class="nv">hexadecimal</span> <span class="o">=</span> <span class="mh">0x11</span>      <span class="c1">// 17 en notación hexadecimal</span>
+
+<span class="k">let</span> <span class="nv">suma</span> <span class="o">=</span> <span class="n">decimal</span> <span class="o">+</span> <span class="n">octal</span>  <span class="c1">// #=&gt; 34</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="float">Float</h2>
+
+<p>Un valor de tipo <code class="highlighter-rouge">Float</code> representa un número con punto flotante de 32 bits, a diferencia de los tipos de dato <code class="highlighter-rouge">Double</code>. Un <code class="highlighter-rouge">Float</code> tiene una precisión de por lo menos 6 dígitos decimales.</p>
+
+<h3 class="no_toc" id="representación-literal-1">Representación literal</h3>
+
+<p>A diferencia de los tipos de dato <code class="highlighter-rouge">Double</code>, cuando se requiere que un tipo de dato sea tomado como <code class="highlighter-rouge">Float</code>, <strong>es necesario</strong> indicarlo a través de la anotación de tipo correspondiente:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">gramos</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">85.32</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="double">Double</h2>
+
+<p>Un valor de tipo <code class="highlighter-rouge">Double</code> representa un número con punto flotante de 64 bits.</p>
+
+<p>Los valores de tipo <code class="highlighter-rouge">Double</code> tienen una precisión de hasta 15 dígitos decimales, y no es necesario declarar que su tipo al momento de asignarlos a una variable o a una constante, ya que cualquier número literal con punto flotante es inferido a ser de tipo <code class="highlighter-rouge">Double</code>.</p>
+
+<h3 class="no_toc" id="representación-literal-2">Representación literal</h3>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">decimal</span> <span class="o">=</span> <span class="mf">12.1875</span>
+<span class="k">let</span> <span class="nv">exponente</span> <span class="o">=</span> <span class="mf">1.21875e1</span>
+<span class="k">let</span> <span class="nv">hexadecimal</span> <span class="o">=</span> <span class="mh">0xC</span><span class="o">.</span><span class="mi">3</span><span class="n">p0</span>
+</code></pre>
+</div>
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Tipos de Datos en Swift&url=https://docs.jekyll.plus/docs/introduccion_al_lenguaje/tipos_de_datos/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.jekyll.plus%2Fdocs%2Fintroduccion_al_lenguaje%2Ftipos_de_datos%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="uk-pagination uk-margin-top">
+          
+            
+            
+            <li><a class="hvr-back" href="/docs/introduccion_al_lenguaje/index/">&larr; Anterior</a></li>
+          
+          
+            
+            
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/introduccion_al_lenguaje/variables/">Siguiente &rarr;</a></li>
+          
+    </ul>
+    
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                    
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/news/" >Blog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/changelog/" >Changelog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/contact/" >Contact</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>
