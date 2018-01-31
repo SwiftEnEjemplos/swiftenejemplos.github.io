@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>guard | Swift en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="guard" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Swift 2.0 introdujo la palabra reser vada guard." />
+<meta property="og:description" content="Swift 2.0 introdujo la palabra reser vada guard." />
+<link rel="canonical" href="https://docs.jekyll.plus/docs/guard" />
+<meta property="og:url" content="https://docs.jekyll.plus/docs/guard" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-31T17:15:13-06:00" />
+<script type="application/ld+json">
+{"description":"Swift 2.0 introdujo la palabra reser vada guard.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://docs.jekyll.plus/docs/guard","headline":"guard","dateModified":"2018-01-31T17:15:13-06:00","datePublished":"2018-01-31T17:15:13-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.jekyll.plus/docs/guard"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.jekyll.plus/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Básico</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Intermedio</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Extras</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">guard</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+    <img class="avatar avatar-small" src="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32" alt="OscarSwanros" srcset="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32 1x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=64 2x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=96 3x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=128 4x" width="32" height="32" data-proofer-ignore="true" />
+
+
+
+    Actualiado por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Oscar Swanros</span></span><br>
+
+
+<time datetime="2018-01-31T17:15:13-06:00" itemprop="datePublished">
+    
+    Jan 31, 2018
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>Swift 2.0 introdujo la palabra reser vada <code class="highlighter-rouge">guard</code>.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">esPositivo</span><span class="p">(</span><span class="nv">numero</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Un <code class="highlighter-rouge">guard</code> nos permite realizar chequeos en el flujo de nuestro programa. Es como decir “para que el programa siga su ejecución, necesito que esta condición sea validada, de lo contrario, ejecuta el código en la cláusula <code class="highlighter-rouge">else</code>.”</p>
+
+<p>Es importante notar que el código dentro de la cláusula <code class="highlighter-rouge">else</code> <strong>debe</strong> de cambiar el flujo de ejecución del programa. Puedes usar cualquiera de estas palabras reservadas para cambiar el flujo del programa desde una cláusula <code class="highlighter-rouge">else</code> en un <code class="highlighter-rouge">guard</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">return</code></li>
+  <li><code class="highlighter-rouge">break</code></li>
+  <li><code class="highlighter-rouge">continue</code></li>
+  <li><code class="highlighter-rouge">throw</code></li>
+</ul>
+
+<p>O en su defecto, llamar a una función marcada con el atributo <code class="highlighter-rouge">@noreturn</code>.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">imprimir</span><span class="p">(</span><span class="nv">cadena</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">cadena</span> <span class="o">=</span> <span class="n">cadena</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior, usamos <code class="highlighter-rouge">guard</code> para asegurarnos de que el opcional <code class="highlighter-rouge">cadena</code> tenga un valor.</p>
+
+<ul>
+  <li>Si esa condición se cumple, el valor de <code class="highlighter-rouge">cadena</code> se transferirá a la constante <code class="highlighter-rouge">cadena</code> (que a partir de ahí será de tipo <code class="highlighter-rouge">String</code>, no <code class="highlighter-rouge">String?</code>), y continúa la ejecución normal del programa.</li>
+  <li>Si no se cumple la condición, se ejecutará el bloque de código en <code class="highlighter-rouge">else</code>, que en este caso simplemente retorna la función.</li>
+</ul>
+
+<h3 id="casos-de-uso">Casos de Uso</h3>
+
+<p>Imagina una pieza de código donde se necesita evaluar diferentes condiciones para que el programa pueda continuar. Antes de Swift 2.0, ese código se vería algo así:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">Usuario</span> <span class="o">=</span> <span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">apellido</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">edad</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">direccion</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">generarUsuario</span><span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">apellido</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">edad</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">direccion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Usuario</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">nombre</span> <span class="o">=</span> <span class="n">nombre</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">apellido</span> <span class="o">=</span> <span class="n">apellido</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="k">let</span> <span class="nv">edad</span> <span class="o">=</span> <span class="n">edad</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">let</span> <span class="nv">direccion</span> <span class="o">=</span> <span class="n">direccion</span> <span class="p">{</span>
+                    <span class="nf">return</span> <span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">direccion</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Si el parámetro nombre era nil, no podemos construir la tupla Usuario</span>
+    <span class="k">return</span> <span class="kc">nil</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Usando <code class="highlighter-rouge">guard</code>, nuestro código cambia tremendamente:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">generarUsuario</span><span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">apellido</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">edad</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">direccion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Usuario</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">guard</span>
+        <span class="k">let</span> <span class="nv">nombre</span> <span class="o">=</span> <span class="n">nombre</span><span class="p">,</span>
+        <span class="k">let</span> <span class="nv">apellido</span> <span class="o">=</span> <span class="n">apellido</span><span class="p">,</span>
+        <span class="k">let</span> <span class="nv">edad</span> <span class="o">=</span> <span class="n">edad</span><span class="p">,</span>
+        <span class="k">let</span> <span class="nv">direccion</span> <span class="o">=</span> <span class="n">direccion</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">nil</span>
+    <span class="p">}</span>
+
+    <span class="nf">return</span> <span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">apellido</span><span class="p">,</span> <span class="n">edad</span><span class="p">,</span> <span class="n">direccion</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=guard&url=https://docs.jekyll.plus/docs/guard&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.jekyll.plus%2Fdocs%2Fguard" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                    
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/news/" >Blog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/changelog/" >Changelog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/contact/" >Contact</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>

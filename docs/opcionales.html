@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Opcionales | Swift en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Opcionales" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Si Swift tiene algo que llama la atención a primera vista, son los signos de interrogación y exclamación que se llegan a ver en el código de vez en vez." />
+<meta property="og:description" content="Si Swift tiene algo que llama la atención a primera vista, son los signos de interrogación y exclamación que se llegan a ver en el código de vez en vez." />
+<link rel="canonical" href="https://docs.jekyll.plus/docs/opcionales" />
+<meta property="og:url" content="https://docs.jekyll.plus/docs/opcionales" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-31T17:15:13-06:00" />
+<script type="application/ld+json">
+{"description":"Si Swift tiene algo que llama la atención a primera vista, son los signos de interrogación y exclamación que se llegan a ver en el código de vez en vez.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://docs.jekyll.plus/docs/opcionales","headline":"Opcionales","dateModified":"2018-01-31T17:15:13-06:00","datePublished":"2018-01-31T17:15:13-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.jekyll.plus/docs/opcionales"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.jekyll.plus/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Básico</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Intermedio</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Extras</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Opcionales</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+    <img class="avatar avatar-small" src="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32" alt="OscarSwanros" srcset="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32 1x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=64 2x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=96 3x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=128 4x" width="32" height="32" data-proofer-ignore="true" />
+
+
+
+    Actualiado por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Oscar Swanros</span></span><br>
+
+
+<time datetime="2018-01-31T17:15:13-06:00" itemprop="datePublished">
+    
+    Jan 31, 2018
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>Si Swift tiene algo que llama la atención a primera vista, son los signos de interrogación y exclamación que se llegan a ver en el código de vez en vez.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">NivelDeEstudios</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="kt">Primaria</span>
+    <span class="k">case</span> <span class="kt">Secundaria</span>
+    <span class="k">case</span> <span class="kt">Preparatoria</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">nivelDeEstudios</span><span class="p">:</span> <span class="kt">NivelDeEstudios</span><span class="p">?</span>
+</code></pre>
+</div>
+
+<p>A cualquier tipo de dato que sea seguido de un signo de interrogación se le conoce como un valor opcional.</p>
+
+<p>En el ejemplo anterior, tenemos un valor <code class="highlighter-rouge">NivelDeEstudios?</code> (se lee “Nivel de estudios opcional”). Esto significa que la variable <code class="highlighter-rouge">nivelDeEstudios</code> <strong><em>puede</em></strong> contener un valor de tipo <code class="highlighter-rouge">NivelDeEstudios</code>, pero <strong><em>no</em> es seguro que lo contenga.</strong> Es como si la variable dijera: “tal vez tenga un string dentro, no sé.”</p>
+
+<p>Los opcionales en Swift nos ayudan a manejar de mejor manera la información con la que trabaja nuestro programa: en un programa que recabe datos para una encuesta, el encuestado tal vez quiera o no decir su nivel de estudios, es por eso que esa variable está marcada como opcional.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">nivelDeEstudios</span><span class="p">:</span> <span class="kt">NivelDeEstudios</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Preparatoria</span>
+
+<span class="kd">func</span> <span class="nf">terminarEncuesta</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// No sabemos si nivelDeEstudios contiene un valor</span>
+    <span class="c1">// Si sí contiene un valor, se lo asignamos a</span>
+    <span class="c1">// la constante nivel.</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">nivel</span> <span class="o">=</span> <span class="n">nivelDeEstudios</span> <span class="p">{</span>
+        <span class="c1">// En este momento, nivel tiene el valor de nivelDeEstudios</span>
+        <span class="c1">// pero nivel es de tipo String, no de tipo String?</span>
+        <span class="nf">guardar</span><span class="p">(</span><span class="n">nivel</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>En el listado de código anterior sucede lo siguiente:</p>
+
+<ol>
+  <li>Declaramos la variable <code class="highlighter-rouge">nivelDeEstudios</code> como un <code class="highlighter-rouge">NivelDeEstudios?</code></li>
+  <li>El programa sigue su ejecución.</li>
+  <li>Al momento en que la ejecución del programa llega a la función <code class="highlighter-rouge">terminarEncuesta</code>, debemos de verificar si esa variable tiene o no datos.</li>
+  <li>Usamos <strong>Extracción de Opcionales</strong> (u <strong>Optional Binding</strong>, en Inglés), para que, en caso de que la variable <code class="highlighter-rouge">nivelDeEstudios</code> <strong>contenga</strong> algún valor, éste sea asignado a la constante <code class="highlighter-rouge">nivel</code>.</li>
+  <li>La variable nivel ahora es un valor de tipo <code class="highlighter-rouge">NivelDeEstudios</code> que podemos manipular libremente, porque sabemos que es un valor que existe.</li>
+</ol>
+
+<p>Conocer bien los opcionales es importante, puesto que nos protegen de errores en nuestros programas donde podríamos creer que tenemos información para procesar, pero en realidad no es así.</p>
+
+<h3 id="cuidado">Cuidado</h3>
+<p>Existe otra forma de obtener los valores de una variable o constante declarada como opcional, y es a través de la <strong>extracción forzada de opcionales.</strong> Es aquí donde el signo de exclamación entra en juego.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">nivelDeEstudios</span><span class="p">:</span> <span class="kt">NivelDeEstudios</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Preparatoria</span>
+
+<span class="kd">func</span> <span class="nf">terminarEncuesta</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// No verificamos que nivelDeEstudios tenga un valor real antes de intentar usarlo</span>
+    <span class="nf">guardar</span><span class="p">(</span><span class="n">nivelDeEstudios</span><span class="o">!</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>El listado anterior muestra un escenario donde no se verifica que el contenido de un opcional exista. Sí, el código puede llegar a verse más limpio, pero también <strong>introduce un gran riesgo</strong>.</p>
+
+<p>¿Qué pasa cuando quiero trabajar con un valor que no existe? Simple, nuestro programa va a detenerse abruptamente, puesto que quisimos usar un espacio de memoria que no existía. <strong>Eso es un error gravísimo, y debemos evitarlo a toda costa</strong>. Es por eso, después de todo, que existe el concepto de “valor opcional” en primer lugar.</p>
+
+<p><strong>En pocas palabras: no uses nunca la extracción forzada de opcionales. Es muy mala práctica, y es peligroso.</strong></p>
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Opcionales&url=https://docs.jekyll.plus/docs/opcionales&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.jekyll.plus%2Fdocs%2Fopcionales" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                    
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/news/" >Blog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/changelog/" >Changelog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/contact/" >Contact</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>

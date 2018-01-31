@@ -1,0 +1,163 @@
+[
+  
+    {
+      "title"    : "Summary",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/summary",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Cómo usar este libro",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/como-usar-este-libro",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Control_de_flujo",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/control-de-flujo",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Enumeraciones",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/enumeraciones",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Estructuras",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/estructuras",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Lista de Palabras Reservadas",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/lista-de-palabras-reservadas",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "guard",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/guard",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Bienvenida",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/index",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Arrays",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/arrays",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Constantes",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/constantes",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Funciones",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/funciones",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Introducción a Swift",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/index",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Tipos de Datos en Swift",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/tipos-de-datos",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Tuplas",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/tuplas",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Variables",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/variables",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Opcionales",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/opcionales",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Primeros pasos",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/primeros-pasos",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Swift_intermedio",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/swift-intermedio",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Switch",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/switch",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } ,
+  
+    {
+      "title"    : "where",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/where",
+      "date"     : "2018-01-31 17:15:13 -0600"
+    } 
+  
+]

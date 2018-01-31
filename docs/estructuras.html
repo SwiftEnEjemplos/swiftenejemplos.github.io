@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Estructuras | Swift en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Estructuras" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Las estructuras (struct) son uno de los pilares principales de Swift como lenguaje." />
+<meta property="og:description" content="Las estructuras (struct) son uno de los pilares principales de Swift como lenguaje." />
+<link rel="canonical" href="https://docs.jekyll.plus/docs/estructuras" />
+<meta property="og:url" content="https://docs.jekyll.plus/docs/estructuras" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-01-31T17:15:13-06:00" />
+<script type="application/ld+json">
+{"description":"Las estructuras (struct) son uno de los pilares principales de Swift como lenguaje.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://docs.jekyll.plus/docs/estructuras","headline":"Estructuras","dateModified":"2018-01-31T17:15:13-06:00","datePublished":"2018-01-31T17:15:13-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.jekyll.plus/docs/estructuras"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.jekyll.plus/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Básico</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Intermedio</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                    <h5>Extras</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Estructuras</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+    <img class="avatar avatar-small" src="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32" alt="OscarSwanros" srcset="https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=32 1x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=64 2x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=96 3x, https://avatars1.githubusercontent.com/OscarSwanros?v=3&s=128 4x" width="32" height="32" data-proofer-ignore="true" />
+
+
+
+    Actualiado por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Oscar Swanros</span></span><br>
+
+
+<time datetime="2018-01-31T17:15:13-06:00" itemprop="datePublished">
+    
+    Jan 31, 2018
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>Las estructuras (<code class="highlighter-rouge">struct</code>) son uno de los pilares principales de Swift como lenguaje.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Vaso</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">contenido</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">capacidad</span><span class="p">:</span> <span class="kt">Float</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>El listado de código anterior define una estructura llamada <code class="highlighter-rouge">Vaso</code> que tiene dos <em>propiedades:</em></p>
+
+<ol>
+  <li><code class="highlighter-rouge">contenido</code>, de tipo <code class="highlighter-rouge">String</code></li>
+  <li><code class="highlighter-rouge">capacidad</code>, de tipo <code class="highlighter-rouge">Float</code></li>
+</ol>
+
+<p>Las estructuras representan unidades de información. A diferencia de las clases (que se discutirán en el capítulo siguiente), lo que importa con las estructuras en Swift es su contenido.</p>
+
+<p><strong>Si una estructura (A) tiene los mismos valores en sus propiedades que otra estructura (B), se considera que A y B son iguales.</strong> Por lo tanto, son intercambiables.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">vaso1</span> <span class="o">=</span> <span class="kt">Vaso</span><span class="p">(</span><span class="nv">contenido</span><span class="p">:</span> <span class="s">"Agua"</span><span class="p">,</span> <span class="nv">capacidad</span><span class="p">:</span> <span class="mi">350</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">vaso2</span> <span class="o">=</span> <span class="kt">Vaso</span><span class="p">(</span><span class="nv">contenido</span><span class="p">:</span> <span class="s">"Leche"</span><span class="p">,</span> <span class="nv">capacidad</span><span class="p">:</span> <span class="mi">350</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">vaso3</span> <span class="o">=</span> <span class="kt">Vaso</span><span class="p">(</span><span class="nv">contenido</span><span class="p">:</span> <span class="s">"Agua"</span><span class="p">,</span> <span class="nv">capacidad</span><span class="p">:</span> <span class="mi">350</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">vaso1</span> <span class="o">==</span> <span class="n">vaso2</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"El primer y el segundo vaso no son iguales"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">vaso1</span> <span class="o">==</span> <span class="n">vaso3</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"El primer y el tercer vaso son iguales"</span><span class="p">)</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Nope"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Si ejecutáramos el código anterior veríamos impresa en pantalla la leyenda “El primer y el tercer vaso son iguales.”</p>
+
+<p>Aunque realmente el espacio de memoria que ocupan <code class="highlighter-rouge">vaso1</code> y <code class="highlighter-rouge">vaso2</code> son diferentes, se considera que son iguales puesto que su contenido es idéntico.</p>
+
+<h3 id="constructores">Constructores</h3>
+
+<p>Toda estructura con propiedades definidas tiene un constructor por defecto que requiere que se le asigne un valor a cada una de las propiedades. Si alguna de las propiedades tiene un valor inicial, dicha propiedad se omite en el constructor por defecto:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Animal</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">numeroDePatas</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">let</span> <span class="nv">familia</span><span class="p">:</span> <span class="kt">FamiliaAnimal</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">animal</span> <span class="o">=</span> <span class="kt">Animal</span><span class="p">(</span><span class="nv">familia</span><span class="p">:</span> <span class="o">.</span><span class="kt">Felidae</span><span class="p">)</span> <span class="c1">// =&gt; Animal {numeroDePatas: 4, familia: Felidae }</span>
+</code></pre>
+</div>
+
+<h3 id="modificando-una-estructura">Modificando una estructura</h3>
+
+<p>Las estructuras con propiedades declaradas como valores inmutables <code class="highlighter-rouge">let</code> es por defecto inmutable por si misma.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Billete</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">valor</span><span class="p">:</span> <span class="kt">Float</span>
+    <span class="k">let</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">miBillete</span> <span class="o">=</span> <span class="kt">Billete</span><span class="p">(</span><span class="nv">valor</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="s">"#68C3A3"</span><span class="p">)</span>
+<span class="n">miBillete</span><span class="o">.</span><span class="n">valor</span>         <span class="c1">// #=&gt; 200</span>
+<span class="n">miBillete</span><span class="o">.</span><span class="n">valor</span> <span class="o">=</span> <span class="mi">500</span>   <span class="c1">// #=&gt; Error!</span>
+</code></pre>
+</div>
+
+<p>Si intentas compilar lo anterior, encontrarás el error:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>swift struct.swift
+struct.swift:8:17: error: cannot assign to property: <span class="s1">'valor'</span> is a <span class="s1">'let'</span> constant
+miBillete.valor <span class="o">=</span> 500   // <span class="c">#=&gt; Error!</span>
+~~~~~~~~~~~~~~~ ^
+struct.swift:2:5: note: change <span class="s1">'let'</span> to <span class="s1">'var'</span> to make it mutable
+    <span class="nb">let </span>valor: Float
+    ^~~
+    var
+</code></pre>
+</div>
+
+<p>Cambiar la declaración de una propiedad de <code class="highlighter-rouge">let</code> a <code class="highlighter-rouge">var</code> en la definición de una estructura hará que esa propiedad pueda ser modificada en tiempo de ejecución.</p>
+
+<p>Puesto que las estructuras en Swift son consideradas como entidades <em>de valor</em>, si deseas modificar una instancia de una estructura, tendrás que declarar que el valor es mutable al momento de crear la misma.</p>
+
+<p><strong>Las propiedades declaradas como valores mutables (<code class="highlighter-rouge">var</code>) serán parte del constructor por defecto aún cuando tengan un valor inicial declarado.</strong></p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Billete</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">valor</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="k">var</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">miBillete</span> <span class="o">=</span> <span class="kt">Billete</span><span class="p">(</span><span class="nv">valor</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="s">"#68C3A3"</span><span class="p">)</span>
+<span class="n">miBillete</span><span class="o">.</span><span class="n">valor</span>         <span class="c1">// #=&gt; 200</span>
+<span class="n">miBillete</span><span class="o">.</span><span class="n">valor</span> <span class="o">=</span> <span class="mi">500</span>   <span class="c1">// #=&gt; 500</span>
+</code></pre>
+</div>
+
+<p>Observa cómo ahora <code class="highlighter-rouge">miBillete</code> es un valor mutable (<code class="highlighter-rouge">var</code>), lo que significa que podemos modificar su contenido.</p>
+
+<p>Aunque el precio de tener una estructura mutable puede parecer mínimo, el punto general de las estructuras en Swift es que sean valores inmutables. Es ampliamente recomendado que se respete este principio.</p>
+
+<p>Ejemplo práctico: un billete no puede cambiar su valor después de haber sido impreso. Puedes tener dos billetes iguales, del mismo valor, del mismo color, y puedes intercambiarlos por otros billetes del mismo valor. Al final de cuenta, te importa cuánto vale, no un billete en específico.</p>
+
+<h3 id="métodos">Métodos</h3>
+
+<p>Hasta ahora hemos visto solamente cómo una estructura puede representar un valor, pero no hemos hablado de cómo una estructura puede interactuar con nuestro programa.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Persona</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">apellido</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">nombreCompleto</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">apellido</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">oscar</span> <span class="o">=</span> <span class="kt">Persona</span><span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="s">"Oscar"</span><span class="p">,</span> <span class="nv">apellido</span><span class="p">:</span> <span class="s">"Swanros"</span><span class="p">)</span>
+<span class="n">oscar</span><span class="o">.</span><span class="nf">nombreCompleto</span><span class="p">()</span>  <span class="c1">// #=&gt; "Oscar Swanros"</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo pasado, definimos una estructura llamada <code class="highlighter-rouge">Persona</code> con dos propiedades y un método. (Se llama “método” y no “función” puesto que se encuentra declarado como parte de la definición de un tipo de dato nuevo.)</p>
+
+<p>Dentro de nuestro método podemos usar las propiedades de nuestra estructura. Por ahora, sólo estamos leyendo los valores <code class="highlighter-rouge">nombre</code> y <code class="highlighter-rouge">apellido</code> y los estamos concatenando. Pero ¿qué pasaría si quisiéramos un método que modifique los valores en nuestra estructura? Hay que especificarlo:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Persona</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">apellido</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">nombreCompleto</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">apellido</span>
+    <span class="p">}</span>
+
+    <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">actualizarNombre</span><span class="p">(</span><span class="nv">nuevoNombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">nombre</span> <span class="o">=</span> <span class="n">nuevoNombre</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">mutante</span> <span class="o">=</span> <span class="kt">Persona</span><span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="s">"Oscar"</span><span class="p">,</span> <span class="nv">apellido</span><span class="p">:</span> <span class="s">"Xavier"</span><span class="p">)</span>
+<span class="n">mutante</span><span class="o">.</span><span class="nf">nombreCompleto</span><span class="p">()</span>            <span class="c1">// #=&gt; "Oscar Xavier"</span>
+<span class="n">mutante</span><span class="o">.</span><span class="nf">actualizarNombre</span><span class="p">(</span><span class="s">"Charles"</span><span class="p">)</span> <span class="c1">// #=&gt; "Charles Xavier"</span>
+</code></pre>
+</div>
+
+<p>Preceder la declaración de un método con la palabra reservada <code class="highlighter-rouge">mutating</code> indica que dicho método, al ser ejecutado, modificará el valor sobre el que actúa (en este caso, una instancia de la estructura <code class="highlighter-rouge">Persona</code>). Aún con esa declaración, es necesario que tanto la propiedad a mutar como la instancia del valor sean declarados como valores mutables (<code class="highlighter-rouge">var</code>).</p>
+
+<p>Llamar un método en una estructura basta con solo poner un punto después de la instancia y llamar al método con los parámetros requeridos.</p>
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Estructuras&url=https://docs.jekyll.plus/docs/estructuras&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.jekyll.plus%2Fdocs%2Festructuras" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                    
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/news/" >Blog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/changelog/" >Changelog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/contact/" >Contact</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>

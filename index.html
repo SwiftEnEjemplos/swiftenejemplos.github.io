@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Swift en Ejemplos | Aprende paso a paso, ejemplo a ejemplo</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Swift en Ejemplos" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Aprende paso a paso, ejemplo a ejemplo" />
+<meta property="og:description" content="Aprende paso a paso, ejemplo a ejemplo" />
+<link rel="canonical" href="https://docs.jekyll.plus/" />
+<meta property="og:url" content="https://docs.jekyll.plus/" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<script type="application/ld+json">
+{"name":"Swift en Ejemplos","description":"Aprende paso a paso, ejemplo a ejemplo","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"WebSite","url":"https://docs.jekyll.plus/","headline":"Swift en Ejemplos","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.jekyll.plus/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+        <div class="uk-section section-hero">
+    <div class="uk-container uk-container-small">
+        
+        <p class="hero-image uk-text-center"><img src="https://docs.jekyll.plus/assets/posts/imac.svg" alt="Hero"></p>
+        
+        <h1 class="uk-heading-hero uk-text-center uk-margin-remove-top">How Can We Help?</h1>
+        <p class="subtitle uk-text-lead uk-text-center">Search or browse in depth articles and videos on everything Jekyll, from basic theme setup and hosting to customisation and development</p>
+
+        
+        <div class="hero-search">
+
+            <!-- Html Elements for Search -->
+            <div class="uk-position-relative">
+                <form class="uk-search uk-search-default uk-width-1-1" name="search-hero" onsubmit="return false;">
+                    <span data-uk-search-icon></span>
+                    <input id="hero-search" class="uk-search-input" type="search" placeholder="Search for answers...">
+                </form>
+                <ul id="hero-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+            </div>
+
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('hero-search'),
+                resultsContainer: document.getElementById('hero-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+
+        </div>
+        
+
+    </div>
+</div>
+
+    
+
+    
+
+
+<div class="uk-section uk-background-muted-">
+    <div class="uk-container">
+
+        
+            <h2 class="uk-text-center heading-hero-2">Browse Topics</h2>
+        
+
+        <p class="subtitle uk-text-lead uk-text-center">Get your answers fast, jump to most popular documentation content</p>
+
+        <div class="uk-child-width-1-3@m uk-grid-match uk-text-center uk-margin-medium-top" data-uk-grid>
+        
+            
+            
+            
+            <div>
+                <div class="uk-card uk-card-body uk-inline uk-border-rounded">
+                    <a class="uk-position-cover" href=""></a>
+                    
+                    <span data-uk-icon="icon: settings; ratio: 2" class=""></span>
+                    
+                    <h3 class="uk-card-title uk-margin">Getting Started</h3>
+                    
+                    <p>Get your account up and running in just few easy steps</p>
+                    
+                </div>
+            </div>
+            
+        
+            
+            
+            
+            <div>
+                <div class="uk-card uk-card-body uk-inline uk-border-rounded">
+                    <a class="uk-position-cover" href=""></a>
+                    
+                    <span data-uk-icon="icon: credit-card; ratio: 2" class=""></span>
+                    
+                    <h3 class="uk-card-title uk-margin">Account and Billing</h3>
+                    
+                    <p>Managing your account, creating new users and exporting data</p>
+                    
+                </div>
+            </div>
+            
+        
+            
+            
+            
+            <div>
+                <div class="uk-card uk-card-body uk-inline uk-border-rounded">
+                    <a class="uk-position-cover" href=""></a>
+                    
+                    <span data-uk-icon="icon: cog; ratio: 2" class=""></span>
+                    
+                    <h3 class="uk-card-title uk-margin">Troubleshooting</h3>
+                    
+                    <p>Answers to most common configuration issues</p>
+                    
+                </div>
+            </div>
+            
+        
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="uk-section uk-text-center">
+    <div class="uk-container uk-container-small">
+
+        
+        <h2 class="heading-hero-2">Popular Articles</h2>
+        
+        <ul class="uk-list uk-list-large list-featured uk-child-width-1-2@s" data-uk-grid>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </ul>
+
+    </div>
+</div>
+
+
+
+<div class="uk-section uk-text-center">
+    <div class="uk-container uk-container-small">
+
+        
+            <h2 class="uk-text-center heading-hero-2">Need More?</h2>
+        
+
+        <p class="subtitle uk-text-lead uk-text-center">This section displays optional page content lorem ipsum</p>
+
+            <div class="article-content uk-margin-medium-top"><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="uk-section uk-text-center">
+    <div class="uk-container uk-container-small">
+        <div class="" data-uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 100">
+            <h3>Didn't find an answer to your question?</h3>
+            <p class="subtitle uk-text-lead uk-text-center">Get in touch with us for details on additional services and custom work pricing</p>
+            <a class="uk-button uk-button-primary uk-button-large button-cta" href="/contact/">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://docs.jekyll.plus/assets/posts/logo.svg" alt="Docs"></a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Help</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/news/" >Blog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/changelog/" >Changelog</a></li>
+            
+                
+            <li><a href="https://docs.jekyll.plus/contact/" >Contact</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+        <footer class="uk-section uk-text-center uk-text-muted uk-link-muted">
+    <div class="uk-container uk-container-small">
+
+        <div>
+            <ul class="uk-subnav uk-flex-center">
+                
+                    
+                    
+                    
+                        <li class="uk-active"><a href="/" >Help</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >News</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/contact/" >Contact</a></li>
+                    
+                
+            </ul>
+        </div>
+        <div class="uk-margin-medium">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+<div class="uk-first-column">
+    <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+<div>
+    <a href="https://www.facebook.com/" data-uk-icon="icon: facebook" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+<div>
+    <a href="https://www.instagram.com/" data-uk-icon="icon: instagram" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+<div>
+    <a href="https://vimeo.com/" data-uk-icon="icon: vimeo" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <div class="uk-margin-medium uk-text-small copyright">Swift En Ejemplos es un proyecto de Oscar Swanros para Aprende iOS.</div>
+
+    </div>
+</footer>
+
+    
+
+    </body>
+
+</html>
