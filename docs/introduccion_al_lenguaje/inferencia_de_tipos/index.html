@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Inferencia de Tipos de Datos | Swift en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Inferencia de Tipos de Datos" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hasta ahora se ha visto que se puede declarar una variable o constante sin necesidad de asinar un valor inicial:" />
+<meta property="og:description" content="Hasta ahora se ha visto que se puede declarar una variable o constante sin necesidad de asinar un valor inicial:" />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/inferencia_de_tipos/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/inferencia_de_tipos/" />
+<meta property="og:site_name" content="Swift en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
+<script type="application/ld+json">
+{"description":"Hasta ahora se ha visto que se puede declarar una variable o constante sin necesidad de asinar un valor inicial:","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/inferencia_de_tipos/","headline":"Inferencia de Tipos de Datos","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/inferencia_de_tipos/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58608125-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+
+  
+</head>
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/docs/index"><img src="https://www.swiftenejemplos.com/assets/posts/logo.svg" alt="Swift en Ejemplos"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="/docs/index" >Inicio</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Aprende iOS</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/blog/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/acerca-de/" >Acerca De</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Buscar..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/index/">Bienvenida</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Nivel 1</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Hola mundo!</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/tipos_de_datos/">Tipos de Datos en Swift</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/variables/">Variables</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/constantes/">Constantes</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/arrays/">Arrays</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/funciones/">Funciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/tuplas/">Tuplas</a></li>
+                    
+                      
+                      
+                      <li class="uk-active"><a href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Nivel 2</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href=""></a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/guard/">guard</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/where/">where</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/enumeraciones/">Enumeraciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/opcionales/">Opcionales</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/estructuras/">Estructuras</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Extras</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/extras/lista_de_palabras_reservadas/">Lista de Palabras Reservadas</a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Inferencia de Tipos de Datos</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>Hasta ahora se ha visto que se puede declarar una variable o constante sin necesidad de asinar un valor inicial:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isValid</span><span class="p">:</span> <span class="kt">Bool</span>
+
+<span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">verified</span><span class="p">,</span> <span class="n">user</span><span class="o">.</span><span class="n">phoneNumber</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+	<span class="n">isValid</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="n">isValid</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior, la constante <code class="highlighter-rouge">isValid</code> no tiene ningún valor asignado al momento en que se declara — pero sí tiene información sobre el tipo de dato que puede aceptar (<code class="highlighter-rouge">Bool</code>). Esto previene que dentro de alguna de las ramas de ejecución en el condicional se le sea asignado algún otro tipo de dato.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isValid</span><span class="p">:</span> <span class="kt">Bool</span>
+
+<span class="n">isValid</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">// #=&gt; Error de compilación, se le quiere asignar un tipo Int a Bool.</span>
+
+
+<span class="kt">Independientemente</span> <span class="n">de</span> <span class="n">la</span> <span class="n">fuente</span> <span class="n">del</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span> <span class="n">asignado</span> <span class="n">a</span> <span class="n">un</span> <span class="n">miembro</span> <span class="n">en</span> <span class="n">un</span> <span class="n">programa</span> <span class="n">de</span> <span class="kt">Swift</span><span class="p">,</span> <span class="n">ya</span> <span class="n">sea</span> <span class="n">que</span> <span class="n">haya</span> <span class="n">sido</span> <span class="n">inferido</span> <span class="n">o</span> <span class="n">declarado</span> <span class="n">explícitamente</span><span class="p">,</span> <span class="kt">Swift</span> <span class="n">hará</span> <span class="n">cumplir</span> <span class="n">la</span> <span class="n">regla</span> <span class="n">que</span> <span class="n">dice</span> <span class="n">que</span> <span class="n">un</span> <span class="n">miembro</span> <span class="n">de</span> <span class="n">un</span> <span class="n">programa</span> <span class="n">de</span> <span class="kt">Swift</span> <span class="n">solamente</span> <span class="n">puede</span> <span class="n">tener</span> <span class="n">valores</span> <span class="n">del</span> <span class="n">tipo</span> <span class="n">de</span> <span class="n">dato</span> <span class="n">con</span> <span class="n">el</span> <span class="n">que</span> <span class="n">fue</span> <span class="n">declarado</span> <span class="n">inicialmente</span><span class="o">.</span>
+</code></pre>
+</div>
+
+<h2 id="qué-es">Qué es</h2>
+
+<p>Cuando a una variable o constante se le asigna un valor inicial en el momento en el que se declara, no es necesario declarar el tipo de dato:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">age1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">let</span> <span class="nv">age2</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior, tanto <code class="highlighter-rouge">age1</code> como <code class="highlighter-rouge">age2</code> son de tipo de dato <code class="highlighter-rouge">Int</code> aunque a <code class="highlighter-rouge">age1</code> no se le declaró explícitamente el tipo de dato adecuado. Swift es suficientemente inteligente para <strong>inferir</strong> a través del contexto de la declaración el tipo de dato que esa variable o constante tiene, sin necesidad de que éste sea explícitamente declarado.</p>
+
+<h2 id="infiriendo-parámetros">Infiriendo parámetros</h2>
+
+<p>La <strong>inferencia de tipos de datos</strong> no solamente funciona al momento de realizar declaraciones de variables o constantes. También es especialmente útil cuando se está trabajando con funciones:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">printValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"This is an Int: </span><span class="se">\(</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// #=&gt; This is an Int: 1</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">printValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"This is a Bool: </span><span class="se">\(</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// #=&gt; This is a Bool: false</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">a</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="k">let</span> <span class="nv">b</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nf">printValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">a</span><span class="p">)</span>
+<span class="nf">printValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">b</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior…</p>
+
+<ol>
+  <li>Dos funciones con exactamente el mismo nombre. Lo único diferente entre ambas funciones es el tipo de dato del único parámetro que aceptan.</li>
+  <li>Tanto <code class="highlighter-rouge">a</code> como <code class="highlighter-rouge">b</code> tienen su tipo de dato <strong>inferido</strong> a partir del valor que se les asignó en su delcaración, <code class="highlighter-rouge">Bool</code> e <code class="highlighter-rouge">Int</code>, respectivamente.</li>
+  <li>Aunque las llamadas a las funciones <code class="highlighter-rouge">printValue(value:)</code> se ven exactamente iguales en código, Swift puede <strong>inferir</strong> a través del tipo de dato del parámetro asignado cuál es la función correcta a llamar en cada caso.</li>
+</ol>
+
+<h2 id="inferencia-de-números-con-punto-flotante">Inferencia de números con punto flotante</h2>
+
+<p>En el caso especial de que Swift tenga que inferir algún tipo de dato que involucre números con punto flotante, siempre se preferirá <code class="highlighter-rouge">Double</code> sobre <code class="highlighter-rouge">Float</code>, a menos que se declare explícitamente otro caso:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">doublePi</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.14159</span>			<span class="c1">// doublePi es tipo Double</span>
+<span class="k">let</span> <span class="nv">floatPi</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.14159</span>	<span class="c1">// floatPi es explícitamente declarado como Float</span>
+</code></pre>
+</div>
+
+<p>Swift es un lenguaje de programación de tipos estáticos, lo que significa que cualquier cosa que se pueda representar en Swift tendrá un tipo de dato asignado. Esto significa también que la <strong>inferencia de datos funciona para cualquier tipo de dato, independientemente de si este es parte de Swift o es definido por el usuario.</strong></p>
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Inferencia de Tipos de Datos&url=https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/inferencia_de_tipos/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fintroduccion_al_lenguaje%2Finferencia_de_tipos%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="uk-pagination uk-margin-top">
+          
+            
+            
+            <li><a class="hvr-back" href="/docs/introduccion_al_lenguaje/tuplas/">&larr; Anterior</a></li>
+          
+          
+            
+            
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ifelse/">Siguiente &rarr;</a></li>
+          
+    </ul>
+    
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Relacionados</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                    
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://www.swiftenejemplos.com/assets/posts/logo.svg" alt="Swift en Ejemplos"></a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/docs/index" >Inicio</a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Aprende iOS</a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/blog/" >Blog</a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/acerca-de/" >Acerca De</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>

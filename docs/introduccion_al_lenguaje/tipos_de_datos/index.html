@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-01T15:00:59-06:00" />
+<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
 <script type="application/ld+json">
-{"description":"Lista de Tipos de Datos","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/","headline":"Tipos de Datos en Swift","dateModified":"2018-02-01T15:00:59-06:00","datePublished":"2018-02-01T15:00:59-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/"},"@context":"http://schema.org"}</script>
+{"description":"Lista de Tipos de Datos","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/","headline":"Tipos de Datos en Swift","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -134,20 +134,20 @@
                     
                       
                       
-                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
+                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
+                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
                     
                     </ul>
                     
-                    <h5>Swift Básico</h5>
+                    <h5>Nivel 1</h5>
                     <ul class="uk-nav uk-nav-default doc-nav">
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Introducción a Swift</a></li>
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Hola mundo!</a></li>
                     
                       
                       
@@ -173,18 +173,18 @@
                       
                       <li class=""><a href="/docs/introduccion_al_lenguaje/tuplas/">Tuplas</a></li>
                     
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
+                    
                     </ul>
                     
-                    <h5>Swift Intermedio</h5>
+                    <h5>Nivel 2</h5>
                     <ul class="uk-nav uk-nav-default doc-nav">
                     
                       
                       
                       <li class=""><a href=""></a></li>
-                    
-                      
-                      
-                      <li class=""><a href="/docs/switch/">Switch</a></li>
                     
                       
                       
@@ -239,6 +239,7 @@
   <li><a href="#int" id="markdown-toc-int">Int</a></li>
   <li><a href="#float" id="markdown-toc-float">Float</a></li>
   <li><a href="#double" id="markdown-toc-double">Double</a></li>
+  <li><a href="#bool" id="markdown-toc-bool">Bool</a></li>
 </ul>
 
 <p>El poder de todo lenguaje nace a partir de los tipos de datos que tiene disponible. Son estos tipos de datos los que nos van a ayudar a representar ultimadamente la información y el flujo de nuestro programa.</p>
@@ -308,6 +309,38 @@
 </code></pre>
 </div>
 
+<hr />
+
+<h2 id="bool">Bool</h2>
+
+<p>Un valor de tipo <code class="highlighter-rouge">Bool</code> solamente tiene dos posibles valores: <code class="highlighter-rouge">true</code> o <code class="highlighter-rouge">false</code>.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">isValid</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="k">let</span> <span class="nv">shouldReturn</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre>
+</div>
+
+<p>Los valores <code class="highlighter-rouge">Bool</code> son especialmente útiles para tomar decisiones en tiempo de ejecución, utilizando condicionales:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="k">if</span> <span class="n">isValid</span> <span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="s">"Yes, this is valid!"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="s">"No, it was not valid!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>En Swift, a diferencia de muchos otros lenguajes, no se puede usar un tipo de dato numérico para representar un Booleano.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">i</span> <span class="p">{</span>
+	<span class="c1">// Este ejemplo no compilará correctamente, puesto que i</span>
+	<span class="c1">// es un tipo de dato Int, no Bool.</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
                         <div class="share uk-text-center">
     <a href="https://twitter.com/intent/tweet?text=Tipos de Datos en Swift&url=https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tipos_de_datos/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
     <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fintroduccion_al_lenguaje%2Ftipos_de_datos%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
@@ -357,6 +390,15 @@
     
 
     <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
     
 
     

@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-01T15:00:59-06:00" />
+<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
 <script type="application/ld+json">
-{"description":"Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los miembros de una tupla no deben de ser del mismo tipo.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/","headline":"Tuplas","dateModified":"2018-02-01T15:00:59-06:00","datePublished":"2018-02-01T15:00:59-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/"},"@context":"http://schema.org"}</script>
+{"description":"Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los miembros de una tupla no deben de ser del mismo tipo.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/","headline":"Tuplas","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -134,20 +134,20 @@
                     
                       
                       
-                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
+                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
+                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
                     
                     </ul>
                     
-                    <h5>Swift Básico</h5>
+                    <h5>Nivel 1</h5>
                     <ul class="uk-nav uk-nav-default doc-nav">
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Introducción a Swift</a></li>
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Hola mundo!</a></li>
                     
                       
                       
@@ -173,18 +173,18 @@
                       
                       <li class="uk-active"><a href="/docs/introduccion_al_lenguaje/tuplas/">Tuplas</a></li>
                     
+                      
+                      
+                      <li class=""><a href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
+                    
                     </ul>
                     
-                    <h5>Swift Intermedio</h5>
+                    <h5>Nivel 2</h5>
                     <ul class="uk-nav uk-nav-default doc-nav">
                     
                       
                       
                       <li class=""><a href=""></a></li>
-                    
-                      
-                      
-                      <li class=""><a href="/docs/switch/">Switch</a></li>
                     
                       
                       
@@ -236,51 +236,53 @@
                     <div class="article-content">
                         <p>Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los <em>miembros</em> de una tupla <strong>no deben de ser del mismo tipo.</strong></p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">usuario</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
 </code></pre>
 </div>
 
-<p>En el ejemplo anterior, declaramos una tupla llamada <code class="highlighter-rouge">usuario</code> que contiene <code class="highlighter-rouge">"Oscar Swanros"</code> y <code class="highlighter-rouge">22</code> como sus miembros. En este caso, diríamos que la tupla sería de tipo <code class="highlighter-rouge">(String, Int)</code>.</p>
+<p>En el ejemplo anterior, declaramos una tupla llamada <code class="highlighter-rouge">user</code> que contiene <code class="highlighter-rouge">"Oscar Swanros"</code> y <code class="highlighter-rouge">22</code> como sus miembros. En este caso, Swift infiere que la tupla sería de tipo <code class="highlighter-rouge">(String, Int)</code>.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">edad</span><span class="p">)</span> <span class="o">=</span> <span class="n">usuario</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">nombre</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>     <span class="c1">// #=&gt; 22</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="n">user</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
 </code></pre>
 </div>
 
-<p>El listado anterior muestra un ejemplo de lo que llamamos <em>pattern matching</em>. En una misma linea, utilizamos la sintaxis <code class="highlighter-rouge">let (nombre, edad)</code> para recuperar los datos en la tupla <code class="highlighter-rouge">usuario</code>. Los contenidos de la tupla se <em>mapean</em> a las constantes definidas: el primer miembro de la tupla se asigna a la primera constante, el segundo a la segunda, etc.</p>
+<p>El listado anterior muestra un ejemplo de lo que llamamos <em>pattern matching</em>, o “reconocimiento de patrones” en español. En una misma linea, utilizamos la sintaxis <code class="highlighter-rouge">let (name, age)</code> para recuperar los datos en la tupla <code class="highlighter-rouge">yser</code>. Los contenidos de la tupla se asignan a las constantes definidas siguiendo la siguiente regla: el primer miembro de la tupla se asigna a la primera constante, el segundo a la segunda, etc.</p>
 
 <p>Usando un guión bajo, podemos ignorar uno o más miembros de la tupla al momento de recuperarlos:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">edad</span><span class="p">)</span> <span class="o">=</span> <span class="n">usuario</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>     <span class="c1">// #=&gt; 22</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="n">user</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>     <span class="c1">// #=&gt; 22</span>
 </code></pre>
 </div>
 
 <p>Podemos también hacer referencia a miembros de la tupla sin necesidad de recuperarlos y asignarlos a constantes o variables externas:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">usuario</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>    <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">usuario</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>    <span class="c1">// #=&gt; Oscar Swanros</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
 </code></pre>
 </div>
+
+<p>En el ejemplo anterior, <code class="highlighter-rouge">user.0</code> hace referencia al primer miembro de la tupla, <code class="highlighter-rouge">user.1</code> al segundo, y así sucesivamente. Los miembros de las tuplas, al igual que en un Array, están indexados desde el 0. <strong>Solamente ten en cuenta que una tupla no representa una lista de objetos</strong>.</p>
 
 <p>Al igual que con las funciones y sus parámetros etiquetados, podemos poner etiquitas a los miembros de una tupla:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">usuario</span> <span class="o">=</span> <span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">edad</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
-<span class="n">usuario</span><span class="o">.</span><span class="n">nombre</span>      <span class="c1">// =&gt; Oscar Swanros</span>
-<span class="n">usuario</span><span class="o">.</span><span class="n">edad</span>        <span class="c1">// =&gt; 22</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
+<span class="n">user</span><span class="o">.</span><span class="n">name</span>      <span class="c1">// =&gt; Oscar Swanros</span>
+<span class="n">user</span><span class="o">.</span><span class="n">age</span>       <span class="c1">// =&gt; 22</span>
 </code></pre>
 </div>
 
-<p>Aunque una “tupla” no tiene un tipo único en Swift como <code class="highlighter-rouge">Int</code>, <code class="highlighter-rouge">Array</code> o <code class="highlighter-rouge">String</code>, podemos usar las tuplas como cualquier otro tipo de dato en nuestros programas. Incluso como tipo de retorno en funciones:</p>
+<p>Aunque una tupla no tiene un tipo único en Swift como <code class="highlighter-rouge">Int</code>, <code class="highlighter-rouge">Array</code> o <code class="highlighter-rouge">String</code>, podemos usar las tuplas como cualquier otro tipo de dato en nuestros programas. Incluso como tipo de retorno en funciones:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">generarUsuario</span><span class="p">(</span><span class="n">nombre</span> <span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">edad</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">edad</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">return</span> <span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">edad</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">createUser</span><span class="p">(</span><span class="n">name</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">return</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="k">let</span> <span class="nv">usuario</span> <span class="o">=</span> <span class="nf">generarUsuario</span><span class="p">(</span><span class="nv">nombre</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">edad</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">usuario</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">usuario</span><span class="o">.</span><span class="n">edad</span><span class="p">)</span>     <span class="c1">// #=&gt; 22</span>
+<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="nf">createUser</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
 </code></pre>
 </div>
 
@@ -341,7 +343,7 @@
           
             
             
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ifelse/">Siguiente &rarr;</a></li>
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Siguiente &rarr;</a></li>
           
     </ul>
     
@@ -355,6 +357,15 @@
     
 
     <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
     
 
     
