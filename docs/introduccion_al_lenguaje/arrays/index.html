@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
+<meta property="article:published_time" content="2018-02-02T13:19:29-06:00" />
 <script type="application/ld+json">
-{"description":"Un array en Swift representa una colleción de valores del mismo tipo.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/","headline":"Arrays","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/"},"@context":"http://schema.org"}</script>
+{"description":"Un array en Swift representa una colleción de valores del mismo tipo.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/","headline":"Arrays","dateModified":"2018-02-02T13:19:29-06:00","datePublished":"2018-02-02T13:19:29-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -236,22 +236,22 @@
                     <div class="article-content">
                         <p>Un array en Swift representa una <strong>colleción de valores del mismo tipo</strong>.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">enteros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 </code></pre>
 </div>
 
-<p>En el ejemplo anterior creamos una constante llamada <code class="highlighter-rouge">enteros</code> y le asignamos un array de enteros usando la notación literal <code class="highlighter-rouge">[1, 2, 3]</code>.</p>
+<p>En el ejemplo anterior creamos una constante llamada <code class="highlighter-rouge">numbers</code> y le asignamos un array de numbers usando la notación literal <code class="highlighter-rouge">[1, 2, 3]</code>.</p>
 
-<p>Si inspeccionamos la constante <code class="highlighter-rouge">enteros</code> nos vamos a dar cuenta que su tipo es <code class="highlighter-rouge">Array&lt;Int&gt;</code>, o sea, array de enteros.</p>
+<p>Si inspeccionamos la constante <code class="highlighter-rouge">numbers</code> nos vamos a dar cuenta que su tipo es <code class="highlighter-rouge">Array&lt;Int&gt;</code>, o sea, array de numbers.</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>swift
-<span class="gp">1&gt; </span><span class="nb">let </span>enteros <span class="o">=</span> <span class="o">[</span>1, 2, 3]
-<span class="gp">2&gt; </span>print<span class="o">(</span>enteros.dynamicType<span class="o">)</span>
+<span class="gp">1&gt; </span><span class="nb">let </span>numbers <span class="o">=</span> <span class="o">[</span>1, 2, 3]
+<span class="gp">2&gt; </span>print<span class="o">(</span><span class="nb">type</span><span class="o">(</span>of: numbers<span class="o">))</span>
 Array&lt;Int&gt;
 </code></pre>
 </div>
 
-<p>Esto significa que el array <code class="highlighter-rouge">enteros</code> solamente puede contener datos de tipo <code class="highlighter-rouge">Int</code>. Otra forma de representar el tipo de dato de esta constante es <code class="highlighter-rouge">[Int]</code>.</p>
+<p>Esto significa que el array <code class="highlighter-rouge">numbers</code> solamente puede contener datos de tipo <code class="highlighter-rouge">Int</code>. Otra forma de representar el tipo de dato de esta constante es <code class="highlighter-rouge">[Int]</code>. Ambas representaciones, tanto <code class="highlighter-rouge">Array&lt;Int&gt;</code> como <code class="highlighter-rouge">[Int]</code> son equivalentes e intercambiables, pero se prefiere el uso de la notación compacta <code class="highlighter-rouge">[Int]</code>.</p>
 
 <p>Para poder modificar un array después de haber sido creado, es necesario que la declaración del mismo indique que es una varible, no una constante:</p>
 
@@ -266,16 +266,16 @@ Array&lt;Int&gt;
 
 <p>Es importante denotar que un array (cualquier variable o constante, realmente) no puede ser manipulada o leída sino hasta después de haber sido inicializado.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">edades</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span>   <span class="c1">// En este momento, se ha declarado la variable nombres, pero no ha sido inicializada</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">edades</span><span class="o">.</span><span class="n">count</span><span class="p">)</span> <span class="c1">// La propiedad count no puede ser usada en este momento</span>
-<span class="n">edades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">34</span><span class="p">]</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">userAges</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]</span>   <span class="c1">// En este momento, se ha declarado la variable nombres, pero no ha sido inicializada</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">userAges</span><span class="o">.</span><span class="n">count</span><span class="p">)</span> <span class="c1">// La propiedad count no puede ser usada en este momento</span>
+<span class="n">userAges</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">34</span><span class="p">]</span>
 </code></pre>
 </div>
 
-<p>Si intentamos compilar lo anterior, el compilador va a decirnos que estamos intentando usar <code class="highlighter-rouge">edades</code> antes de haber sido inicializada:</p>
+<p>Si intentamos compilar lo anterior, el compilador va a decirnos que estamos intentando usar <code class="highlighter-rouge">userAges</code> antes de haber sido inicializada:</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>swift array.swift
-array.swift:2:1: error: variable <span class="s1">'edades'</span> used before being initialized
+array.swift:2:1: error: variable <span class="s1">'userAges'</span> used before being initialized
 edades.count
 ^
 array.swift:1:5: note: variable defined here
@@ -541,7 +541,27 @@ var edades: <span class="o">[</span>Int]
 </div>
 
 
-                    
+                     
+
+  <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/arrays/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://swiftenejemplos.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+ 
                 </article>
 
                 <script>

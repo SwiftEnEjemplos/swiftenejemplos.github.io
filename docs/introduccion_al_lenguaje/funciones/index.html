@@ -17,9 +17,9 @@
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
+<meta property="article:published_time" content="2018-02-02T13:19:29-06:00" />
 <script type="application/ld+json">
-{"description":"Es muy fácil declarar una función en Swift. Sólo hay que usar la palabra reservada func:","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/","headline":"Funciones","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/"},"@context":"http://schema.org"}</script>
+{"description":"Es muy fácil declarar una función en Swift. Sólo hay que usar la palabra reservada func:","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/","headline":"Funciones","dateModified":"2018-02-02T13:19:29-06:00","datePublished":"2018-02-02T13:19:29-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -236,49 +236,97 @@
                     <div class="article-content">
                         <p>Es muy fácil declarar una función en Swift. Sólo hay que usar la palabra reservada <code class="highlighter-rouge">func</code>:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">decirHola</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"hola!"</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">greet</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello!"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>El ejemplo en el listado anterior declara una función llamada <code class="highlighter-rouge">decirHola</code>, que no acepta ningún parámetro, y al ser invocada imprimirá en pantalla el texto <code class="highlighter-rouge">hola!</code>.</p>
+<p>El ejemplo en el listado anterior declara una función llamada <code class="highlighter-rouge">greet</code>, que no acepta ningún parámetro, y al ser invocada imprimirá en pantalla el texto <code class="highlighter-rouge">Hello!</code>.</p>
 
 <p>Para invocar una función hay que escribir su nombre seguido de paréntesis:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">decirHola</span><span class="p">()</span> <span class="c1">// #=&gt; hola!</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">greet</span><span class="p">()</span> <span class="c1">// #=&gt; Hello!</span>
 </code></pre>
 </div>
 
-<p>Muchas de las funciones que escribas en un futuro trabajarán con algún tipo de información. Esta información puede ser <em>pasada</em> a la función como parámetro de la misma:</p>
+<p>Muchas de las funciones que escribas en un futuro trabajarán con algún tipo de información. Esta información puede ser proporcinoada a la función como parámetro de la misma:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">sumar</span><span class="p">(</span><span class="nv">primerNumero</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">segundoNumero</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">primerNumero</span> <span class="o">+</span> <span class="n">segundoNumero</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="s">"Hello, </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">!"</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="nf">sumar</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">segundoNumero</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1">// =&gt; 5</span>
+<span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar"</span><span class="p">)</span> <span class="c1">// #=&gt; Hello, Oscar!</span>
 </code></pre>
 </div>
 
-<p>El listado anterior declara una función que acepta dos parámetros de tipo entero (<code class="highlighter-rouge">primerNumero</code> y <code class="highlighter-rouge">segundoNumero</code>) y debe de retornar un tipo de dato entero (<code class="highlighter-rouge">-&gt; Int</code>).</p>
+<p>Una función puede tener tantos parámetros como se desee, pero es recomendable mantener la sanidad al momento de crear funciones. Una función con muchos parámetros usualmente es un indicio de que el código puede ser refactorizado.</p>
 
-<p>Primero observemos la declaración de la función.</p>
+<h2 id="argumentos-etiquetados">Argumentos etiquetados</h2>
 
-<p>Para Swift, dicha función se llama <code class="highlighter-rouge">sumar(_: segundoNumero:)</code> internamente. Observa el guión bajo en su nombre. Swift omite el nombre del primer parámetro para representar la función internamente. El nombre del segundo parámetro es usado tanto como para representar el nombre de la función internamente, como para el parámetro tal cual (para uso dentro de la función).</p>
-
-<p>Esto puede hacer que el llamar una función resulte algo complicado. Como en el ejemplo anterior. ¿No sería mejor si se pudiera leer más naturalmente? La respuesta es sí:</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">sumar</span><span class="p">(</span><span class="nv">primerNumero</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">con</span> <span class="nv">segundoNumero</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">primerNumero</span> <span class="o">+</span> <span class="n">segundoNumero</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">number</span> <span class="nv">firstNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">and</span> <span class="nv">secondNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="nf">sumar</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">con</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// =&gt; 5</span>
+<span class="nf">add</span><span class="p">(</span><span class="nv">number</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span> <span class="c1">// #=&gt; 90</span>
 </code></pre>
 </div>
 
-<p>Ahora, nuestra función sigue teniendo dos parámetros de tipo entero. El primer parámetro se omitirá en la llamada a la función, y el segundo parámetro será representado externamente usando <code class="highlighter-rouge">con</code>, pero internamente usando <code class="highlighter-rouge">segundoNumero</code>. Estamos haciendo uso del etiquetado de parámetros.</p>
+<p>Swift es un lenguaje que se preocupa mucho porque el código sea lo más expresivo posible. Para ese efecto, se puede <em>adornar</em> los parámetros de las funciones con nombres externos y nombres internos.</p>
 
-<p>Hacer buen uso de esta capacidad de Swift resulta en código mucho más legible, como vimos anteriormente.</p>
+<p>En el ejemplo anterior, se le asignaron etiquetas a los parámetros <code class="highlighter-rouge">firstNumber</code> y <code class="highlighter-rouge">secondNumber</code>. Estas etiquetas sirven para que la llamada a la función sea mucho más expresiva sin sacrificar facilidad de uso dentro de la misma.</p>
+
+<p>Si no se proporciona una etiqueta explícitamente, como en la función <code class="highlighter-rouge">greet(name:)</code>, la etiqueta y el parámetro se llamarán igual.</p>
+
+<p>Del mismo modo, se puede obligar a Swift a omitir por completo las etiquetas en las llamadas a las funciones:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">firstNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">and</span> <span class="nv">secondNumber</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nf">print</span><span class="p">(</span><span class="n">firstNumber</span> <span class="o">+</span> <span class="n">secondNumber</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">add</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="nv">and</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span> <span class="c1">// #=&gt; 90</span>
+</code></pre>
+</div>
+
+<p>En casos como el anterior, remover la etiqueta del primer parámetro de la función resulta en que la llamada a la misma sea mucho más expresiva, pues <code class="highlighter-rouge">number</code> resultaba realmente excesivo.</p>
+
+<p>Las etiquetas en las funciones existen para mejorar la legibilidad, y deben usarse con criterio, pues tanto abusar de ellas como removerlas por completo puede afectar severamente la facilidad de mantenimiento de código.</p>
+
+<p><strong>“Claridad sobre brevedad”</strong> es la regla que se debe tener en mente.</p>
+
+<h2 id="retorno-de-valores">Retorno de valores</h2>
+
+<p>Una función también puede retornar valores. Cuando se espera que una función retorne algún tipo de dato, se debe declarar explícitamente:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">double</span><span class="p">(</span><span class="n">_</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">double</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="c1">// #=&gt; 4</span>
+</code></pre>
+</div>
+
+<p>Una función puede retornar cualquier tipo de dato.</p>
+
+<p>El ejemplo anterior toma un número entero y lo multiplica por dos, regresando el resultado de dicha operación. Se dice que la función tiene un tipo de retorno <code class="highlighter-rouge">Int</code>, especificado por el <code class="highlighter-rouge">-&gt; Int</code> después de la lista de parámetros.</p>
+
+<p>El resultado de la función <code class="highlighter-rouge">double(_:)</code> luego es pasado a la función <code class="highlighter-rouge">print(_:)</code>, que a su vez lo imprime en pantalla.</p>
+
+<p>Una función también puede ser pasada como parámetro a otra función, siempre y cuando sus tipos de datos sean compatibles. En un capítulo posterior se verá un ejemplo de esto.</p>
+
+<p>No es necesario que una función tenga un tipo de dato de retorno para poder usar <code class="highlighter-rouge">return</code>. De hecho, si se desea interrumpir la ejecución de una función antes de que ésta ejecute su última linea, se puede hacer simplemente usando <code class="highlighter-rouge">return</code>.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">verified</span> <span class="p">{</span>
+		<span class="c1">// El usuario ya ha sido verificado,</span>
+		<span class="c1">// no es necesario continuar con la ejecución de la función</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
+	
+	<span class="c1">// Proceder con la rutina de verificación del usuario</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
                         <div class="share uk-text-center">
     <a href="https://twitter.com/intent/tweet?text=Funciones&url=https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
@@ -526,7 +574,27 @@
 </div>
 
 
-                    
+                     
+
+  <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/funciones/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://swiftenejemplos.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+ 
                 </article>
 
                 <script>

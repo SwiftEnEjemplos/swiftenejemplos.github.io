@@ -11,15 +11,15 @@
 <meta property="og:title" content="Enumeraciones" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Las enumeraciones en Swift comprenden una de sus características más poderosas. Nos permiten representar información de una manera mucho más clara. Se declaran usando la palabra reservada enum:" />
-<meta property="og:description" content="Las enumeraciones en Swift comprenden una de sus características más poderosas. Nos permiten representar información de una manera mucho más clara. Se declaran usando la palabra reservada enum:" />
+<meta name="description" content="Las enumeraciones en Swift comprenden una de sus características más poderosas. El propósito de una enumeración es agrupar semánticamente un grupo de opciones." />
+<meta property="og:description" content="Las enumeraciones en Swift comprenden una de sus características más poderosas. El propósito de una enumeración es agrupar semánticamente un grupo de opciones." />
 <link rel="canonical" href="https://www.swiftenejemplos.com/docs/enumeraciones/" />
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/enumeraciones/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-01T19:19:22-06:00" />
+<meta property="article:published_time" content="2018-02-02T13:19:29-06:00" />
 <script type="application/ld+json">
-{"description":"Las enumeraciones en Swift comprenden una de sus características más poderosas. Nos permiten representar información de una manera mucho más clara. Se declaran usando la palabra reservada enum:","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/enumeraciones/","headline":"Enumeraciones","dateModified":"2018-02-01T19:19:22-06:00","datePublished":"2018-02-01T19:19:22-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/enumeraciones/"},"@context":"http://schema.org"}</script>
+{"description":"Las enumeraciones en Swift comprenden una de sus características más poderosas. El propósito de una enumeración es agrupar semánticamente un grupo de opciones.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/enumeraciones/","headline":"Enumeraciones","dateModified":"2018-02-02T13:19:29-06:00","datePublished":"2018-02-02T13:19:29-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/enumeraciones/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -234,48 +234,107 @@
                     </div>
 
                     <div class="article-content">
-                        <p>Las enumeraciones en Swift comprenden una de sus características más poderosas. Nos permiten representar información de una manera mucho más clara. Se declaran usando la palabra reservada <code class="highlighter-rouge">enum</code>:</p>
+                        <p>Las enumeraciones en Swift comprenden una de sus características más poderosas. El propósito de una enumeración es agrupar semánticamente un grupo de opciones.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">TipoDeUsuario</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="kt">Admin</span>
-    <span class="k">case</span> <span class="kt">Editor</span>
-    <span class="k">case</span> <span class="kt">Autor</span>
-    <span class="k">case</span> <span class="kt">Lector</span>
+<p>Se declaran usando la palabra reservada <code class="highlighter-rouge">enum</code>:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">UserType</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">admin</span>
+    <span class="k">case</span> <span class="n">editor</span>
+    <span class="k">case</span> <span class="n">author</span>
+    <span class="k">case</span> <span class="n">reader</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>El listado de código anterior define una enumeración llamada <code class="highlighter-rouge">TipoDeUsuario</code> que tiene como opciones <code class="highlighter-rouge">.Admin</code>, <code class="highlighter-rouge">.Editor</code>, <code class="highlighter-rouge">.Autor</code> y <code class="highlighter-rouge">.Lector</code>. En este contexto, nuestro programa ahora cuenta con un nuevo tipo de dato <code class="highlighter-rouge">TipoDeUsuario</code> y podemos usarlo al igual que usaríamos cualquier <code class="highlighter-rouge">Int</code> ó <code class="highlighter-rouge">String</code>.</p>
+<p>El listado de código anterior define una enumeración llamada <code class="highlighter-rouge">UserType</code> que tiene como opciones <code class="highlighter-rouge">.admin</code>, <code class="highlighter-rouge">.editor</code>, <code class="highlighter-rouge">.author</code> y <code class="highlighter-rouge">.reader</code>. En este contexto, nuestro programa ahora cuenta con un nuevo tipo de dato <code class="highlighter-rouge">UserType</code> y podemos usarlo al igual que usaríamos cualquier <code class="highlighter-rouge">Int</code> ó <code class="highlighter-rouge">String</code>.</p>
 
-<p>Podemos crear una <em>instancia</em> de una enumeración de la siguiente manera:</p>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Una estructura User que tiene una propiedad type de tipo UserType</span>
+<span class="kd">struct</span> <span class="kt">User</span> <span class="p">{</span>
+	<span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UserType</span> <span class="o">=</span> <span class="o">.</span><span class="n">admin</span>
+<span class="p">}</span>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">admin</span> <span class="o">=</span> <span class="kt">TipoDeUsuario</span><span class="o">.</span><span class="kt">Admin</span>
-<span class="k">let</span> <span class="nv">autor</span><span class="p">:</span> <span class="kt">TipoDeUsuario</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Autor</span>
+
+<span class="kd">func</span> <span class="nf">userDidLogin</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">switch</span> <span class="n">user</span><span class="o">.</span><span class="n">type</span> <span class="p">{</span>
+		<span class="k">case</span> <span class="o">.</span><span class="nv">admin</span><span class="p">:</span>
+			<span class="c1">// Mostrar el panel de administrador</span>
+			
+		<span class="k">case</span> <span class="o">.</span><span class="nv">editor</span><span class="p">:</span>
+			<span class="c1">// Mostrar el panel de edición</span>
+			
+		<span class="k">case</span> <span class="o">.</span><span class="nv">author</span><span class="p">:</span>
+			<span class="c1">// Mostrar el panel de autores</span>
+			
+		<span class="k">case</span> <span class="o">.</span><span class="nv">reader</span><span class="p">:</span>
+			<span class="c1">// Mostrar lista de lectura</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
 </code></pre>
 </div>
 
-<h3 id="enums-con-tipos-de-dato-de-respaldo"><code class="highlighter-rouge">enums</code> con tipos de dato de respaldo</h3>
+<p>En el ejemplo anterior, hay una estructura <code class="highlighter-rouge">User</code> con una propiedad <code class="highlighter-rouge">type: UserType</code>, la cual sirve como referencia para determinar si el usuario en cuestión puede o no acceder al panel de administrador.</p>
 
-<p>Ambas constantes son de tipo <code class="highlighter-rouge">TipoDeUsuario</code>.</p>
+<p>Este tipo de aplicaciones es muy común cuando se trata de enumeraciones en Swift: una lista de posibles valores, a partir de los cuales se van a tomar decisiones.</p>
 
-<p>Las enumeraciones también se pueden crear a partir de datos. A continuación declaramos una enumeración que tiene <code class="highlighter-rouge">String</code> como tipo de dato de respaldo para cada caso:</p>
+<h3 id="con-datos-de-respaldo">Con datos de respaldo</h3>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">UtencilioDeCocina</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="kt">Tenedor</span> <span class="o">=</span> <span class="s">"tenedor"</span>
-    <span class="k">case</span> <span class="kt">Cuchillo</span> <span class="o">=</span> <span class="s">"cuchillo"</span>
-    <span class="k">case</span> <span class="kt">Cuchara</span> <span class="o">=</span> <span class="s">"cuchara"</span>
+<p>Cuando <code class="highlighter-rouge">UserType</code> fue declarado anteriormente, no se le asignó ningún tipo de dato a cada uno de los miembros de la enumeración.</p>
+
+<p>Las enumeraciones también se pueden crear a partir de datos <em>brutos</em>, o <em>raw values</em>. Los miembros de una enumeración que tiene datos de respaldo pueden ser creados a partir de dichos datos.</p>
+
+<p>Ejemplo:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">PodiumPlace</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+	<span class="k">case</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="k">case</span> <span class="n">second</span> <span class="o">=</span> <span class="mi">2</span>
+	<span class="k">case</span> <span class="n">third</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="p">}</span>
 
-<span class="k">let</span> <span class="nv">tenedor</span> <span class="o">=</span> <span class="kt">UtencilioDeCocina</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"tenedor"</span><span class="p">)</span> <span class="c1">// =&gt; Tenedor</span>
-<span class="k">let</span> <span class="nv">cuchillo</span> <span class="o">=</span> <span class="kt">UtencilioDeCocina</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"cuchara sopera"</span><span class="p">)</span> <span class="c1">// =&gt; nil, "cuchara sopera" no está declarada como miembro de respaldo de la enumeración</span>
+
+<span class="k">let</span> <span class="nv">firstPlace</span><span class="p">:</span> <span class="kt">PodiumPlace</span> <span class="o">=</span> <span class="o">.</span><span class="n">first</span>		<span class="c1">// #=&gt; firstPlace.rawValue == 1</span>
+<span class="k">let</span> <span class="nv">secondPlace</span> <span class="o">=</span> <span class="kt">PodiumPlace</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="mi">2</span><span class="p">)</span>	<span class="c1">// #=&gt; secondPlace.rawValue == 2</span>
 </code></pre>
 </div>
 
 <p>Usando el constructor <code class="highlighter-rouge">rawValue:</code> podemos pasar un argumento del tipo de dato que respalda a la enumeración. Si el dato que pasamos al constructor es igual a uno de los declarados en la enumeración, se generará una instancia de la enumeración.</p>
 
-<p>Del mismo modo, podemos obtener el valor de respaldo de una instancia de una enumeración usando la propiedad <code class="highlighter-rouge">rawValue</code>:</p>
+<p>Algunos puntos a considerar sobre las enumeraciones con datos de respaldo:</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="kt">UtencilioDeCocina</span><span class="o">.</span><span class="kt">Cuchillo</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span> <span class="c1">// #=&gt; "cuchillo"</span>
+<ol>
+  <li>Todos los miembros de la misma deben de tener el mismo tipo de dato de respaldo. No se puede declarar una enumeración <code class="highlighter-rouge">enum Foo: Int</code> y asignarle cadenas de texto a sus miembros.</li>
+  <li>El constructor <code class="highlighter-rouge">rawValue</code> retornará <code class="highlighter-rouge">nil</code> si el valor proporcionado no corresponde a ningún miembro de la enumeración.</li>
+</ol>
+
+<h2 id="valores-de-respaldo-implícitamente-declarados">Valores de respaldo implícitamente declarados</h2>
+
+<p>Cuando se quiere trabajar con enumeraciones con datos de respaldo que siguen una secuencia lógica, como el ejemplo anterior (1, 2, 3), se puede declarar solamente el valor que inicia la secuencia, y Swift inferirá el resto de los valores:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">PodiumPlace</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+	<span class="k">case</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">1</span>
+	<span class="k">case</span> <span class="n">second</span>
+	<span class="k">case</span> <span class="n">third</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="kt">PodiumPlace</span><span class="o">.</span><span class="n">third</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span> <span class="c1">// #=&gt; 3</span>
+</code></pre>
+</div>
+
+<p>De la misma forma, cuando se requiere que el tipo de dato de respaldo sea <code class="highlighter-rouge">String</code>, siempre y cuando los valores brutos de cada miembro sean iguales a los miembros de la enumeración, se puede omitir la declaración explícita:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">UserType</span><span class="p">:</span> <span class="kt">String</span><span class="p">{</span>
+	<span class="k">case</span> <span class="n">admin</span>
+	<span class="k">case</span> <span class="n">reader</span>
+<span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="kt">UserType</span><span class="o">.</span><span class="n">admin</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span> <span class="c1">// #=&gt; "admin"</span>
+
+<span class="k">let</span> <span class="nv">reader</span> <span class="o">=</span> <span class="kt">UserType</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"reader"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">superAdmin</span> <span class="o">=</span> <span class="kt">UserType</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="s">"super_admin"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">reader</span><span class="o">.</span><span class="n">rawValue</span><span class="p">)</span> 	<span class="c1">// #=&gt; "reader"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">superAdmin</span><span class="p">)</span>		<span class="c1">// #=&gt; nil</span>
 </code></pre>
 </div>
 
@@ -283,26 +342,24 @@
 
 <p>Las enumeraciones, además poder tener tipos de dato de respalo, pueden, por así decirlo, transportar datos.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">Resultado</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="kt">Error</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span>
-    <span class="k">case</span> <span class="kt">Valor</span><span class="p">(</span><span class="kt">AnyObject</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">enum</span> <span class="kt">Result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nf">error</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="k">case</span> <span class="nf">success</span><span class="p">(</span><span class="kt">AnyObject</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>En el listado de código anterior definimos una enumeración con dos <em>cases</em> que pueden transportar datos: <code class="highlighter-rouge">.Error</code> que tiene asociados un <code class="highlighter-rouge">Int</code> y un <code class="highlighter-rouge">String</code>, y <code class="highlighter-rouge">.Valor</code>, que puede transportar cualquier objeto.</p>
+<p>En el listado de código anterior definimos una enumeración con dos <em>cases</em> que pueden transportar datos: <code class="highlighter-rouge">.error</code> que tiene asociados un <code class="highlighter-rouge">Int</code> y un <code class="highlighter-rouge">String</code>, y <code class="highlighter-rouge">.success</code>, que puede transportar cualquier objeto.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="kt">Resultado</span><span class="o">.</span><span class="kt">Error</span><span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s">"Página no encontrada"</span><span class="p">)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="kt">Result</span><span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s">"Not Found"</span><span class="p">)</span>
 
 <span class="k">switch</span> <span class="n">error</span> <span class="p">{</span>
-<span class="k">case</span> <span class="o">.</span><span class="kt">Error</span><span class="p">(</span><span class="k">let</span> <span class="nv">codigo</span><span class="p">,</span> <span class="k">let</span> <span class="nv">descripcion</span><span class="p">):</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"Código </span><span class="se">\(</span><span class="n">codigo</span><span class="se">)</span><span class="s">: "</span> <span class="o">+</span> <span class="n">descripcion</span><span class="p">)</span>
+<span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">code</span><span class="p">,</span> <span class="k">let</span> <span class="nv">description</span><span class="p">):</span>
+	<span class="c1">// Mostrar el error al usuario, y/ó realizar operaciones necesarias</span>
 
-<span class="k">case</span> <span class="o">.</span><span class="kt">Valor</span><span class="p">(</span><span class="k">let</span> <span class="nv">valor</span><span class="p">):</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+<span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">value</span><span class="p">):</span>
+	<span class="c1">// La operación no tuvo errores, value contiene el resultado esperado</span>
 <span class="p">}</span>
-
-<span class="c1">// #=&gt; "Código 404: Página no encontrada"</span>
 </code></pre>
 </div>
 
@@ -572,7 +629,27 @@
 </div>
 
 
-                    
+                     
+
+  <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.swiftenejemplos.com/docs/enumeraciones/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/enumeraciones/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://swiftenejemplos.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+ 
                 </article>
 
                 <script>
