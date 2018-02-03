@@ -1,11 +1,27 @@
 [
   
     {
+      "title"    : "Arrays",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/arrays/",
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
       "title"    : "Cómo usar este libro",
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/como_usar_este_libro/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Constantes",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/constantes/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -13,7 +29,15 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/control_de_flujo/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Diccionarios",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/diccionarios/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -21,7 +45,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/enumeraciones/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -29,7 +53,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/estructuras/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -37,7 +61,15 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/extras/lista_de_palabras_reservadas/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Funciones",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/funciones/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -45,7 +77,15 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/guard/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Hola mundo!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/hola_mundo/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -53,79 +93,23 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/ifelse/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Bienvenida",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/index/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Arrays",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/arrays/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Constantes",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/constantes/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Funciones",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/funciones/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Hola mundo!",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/index/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
       "title"    : "Inferencia de Tipos de Datos",
       "category" : "",
       "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/inferencia_de_tipos/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "url"      : "/docs/inferencia_de_tipos/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
-      "title"    : "Tipos de Datos en Swift",
+      "title"    : "Introducción",
       "category" : "",
       "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/tipos_de_datos/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Tuplas",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/tuplas/",
-      "date"     : "2018-02-02 17:26:51 -0600"
-    } ,
-  
-    {
-      "title"    : "Variables",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/introduccion_al_lenguaje/variables/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "url"      : "/docs/introduccion/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -133,7 +117,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/opcionales/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -141,7 +125,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/primeros_pasos/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -149,7 +133,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/swift_intermedio/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -157,7 +141,31 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/switch/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Tipos de Datos en Swift",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/tipos_de_datos/",
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Tuplas",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/tuplas/",
+      "date"     : "2018-02-02 18:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Variables",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/variables/",
+      "date"     : "2018-02-02 18:15:00 -0600"
     } ,
   
     {
@@ -165,7 +173,7 @@
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/where/",
-      "date"     : "2018-02-02 17:26:51 -0600"
+      "date"     : "2018-02-02 18:15:00 -0600"
     } 
   
 ]

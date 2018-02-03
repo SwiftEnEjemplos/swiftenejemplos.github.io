@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Tuplas | Swift en Ejemplos</title>
+<title>Variables | Swift en Ejemplos</title>
 <meta name="generator" content="Jekyll v3.4.1" />
-<meta property="og:title" content="Tuplas" />
+<meta property="og:title" content="Variables" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los miembros de una tupla no deben de ser del mismo tipo." />
-<meta property="og:description" content="Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los miembros de una tupla no deben de ser del mismo tipo." />
-<link rel="canonical" href="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/" />
-<meta property="og:url" content="https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/" />
+<meta name="description" content="Una variable en Swift se declara con la palabra reservada var." />
+<meta property="og:description" content="Una variable en Swift se declara con la palabra reservada var." />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/variables/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/variables/" />
 <meta property="og:site_name" content="Swift en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-02T17:26:51-06:00" />
+<meta property="article:published_time" content="2018-02-02T18:15:00-06:00" />
 <script type="application/ld+json">
-{"description":"Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los miembros de una tupla no deben de ser del mismo tipo.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/","headline":"Tuplas","dateModified":"2018-02-02T17:26:51-06:00","datePublished":"2018-02-02T17:26:51-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/"},"@context":"http://schema.org"}</script>
+{"description":"Una variable en Swift se declara con la palabra reservada var.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/variables/","headline":"Variables","dateModified":"2018-02-02T18:15:00-06:00","datePublished":"2018-02-02T18:15:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/variables/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -67,7 +67,7 @@
                     
                     
                     
-                        <li><a href="/docs/index" >Ver Ejemplos</a></li>
+                        <li><a href="/docs/introduccion/" >Ver Ejemplos</a></li>
                     
                 
                     
@@ -136,7 +136,7 @@
                     
                       
                       
-                      <li class=""><a href="/docs/index/">Bienvenida</a></li>
+                      <li class=""><a href="/docs/introduccion/">Introducción</a></li>
                     
                       
                       
@@ -153,35 +153,39 @@
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/index/">Hola mundo!</a></li>
+                      <li class=""><a href="/docs/hola_mundo/">Hola mundo!</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/tipos_de_datos/">Tipos de Datos en Swift</a></li>
+                      <li class=""><a href="/docs/tipos_de_datos/">Tipos de Datos en Swift</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/variables/">Variables</a></li>
+                      <li class="uk-active"><a href="/docs/variables/">Variables</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/constantes/">Constantes</a></li>
+                      <li class=""><a href="/docs/constantes/">Constantes</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/arrays/">Arrays</a></li>
+                      <li class=""><a href="/docs/arrays/">Arrays</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/funciones/">Funciones</a></li>
+                      <li class=""><a href="/docs/diccionarios/">Diccionarios</a></li>
                     
                       
                       
-                      <li class="uk-active"><a href="/docs/introduccion_al_lenguaje/tuplas/">Tuplas</a></li>
+                      <li class=""><a href="/docs/funciones/">Funciones</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
+                      <li class=""><a href="/docs/tuplas/">Tuplas</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
                     
                       
                       
@@ -226,7 +230,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Tuplas</h1>
+                    <h1 class="uk-article-title">Variables</h1>
 
                     
 
@@ -236,68 +240,39 @@
                     </div>
 
                     <div class="article-content">
-                        <p>Las tuplas agrupan datos en un mismo objeto. A diferencia de los arrays, los <em>miembros</em> de una tupla <strong>no deben de ser del mismo tipo.</strong></p>
+                        <p>Una variable en Swift se declara con la palabra reservada <code class="highlighter-rouge">var</code>.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="p">(</span><span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">"Oscar"</span>
 </code></pre>
 </div>
 
-<p>En el ejemplo anterior, declaramos una tupla llamada <code class="highlighter-rouge">user</code> que contiene <code class="highlighter-rouge">"Oscar Swanros"</code> y <code class="highlighter-rouge">22</code> como sus miembros. En este caso, Swift infiere que la tupla sería de tipo <code class="highlighter-rouge">(String, Int)</code>.</p>
+<p>Las variables son conocidos como “valores mutables” dentro de Swift, no precisamente “variables.”</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="n">user</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
+<p>Una de las ventajas de Swift es su excelente sistema de inferencia de tipos de datos, lo que significa que el compilador automáticamente sabe de qué tipo es tu variable sin la necesidad de expresarlo explícitamente.</p>
+
+<p>El ejemplo anterior declara una variable de tipo <code class="highlighter-rouge">String</code>, ya que del lado derecho del signo de asignación (<code class="highlighter-rouge">=</code>) pusimos una representación literal de un <code class="highlighter-rouge">String</code>.</p>
+
+<p>Si queremos declarar una variable sin asignarle un valor inicial (como en el ejemplo anterior), podemos hacerlo declarando el tipo de dato que espera la variable:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>  <span class="c1">// #=&gt; Declarar la variable name de tipo String sin asignar un valor inicial</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">"Oscar"</span>
 </code></pre>
 </div>
 
-<p>El listado anterior muestra un ejemplo de lo que llamamos <em>pattern matching</em>, o “reconocimiento de patrones” en español. En una misma linea, utilizamos la sintaxis <code class="highlighter-rouge">let (name, age)</code> para recuperar los datos en la tupla <code class="highlighter-rouge">yser</code>. Los contenidos de la tupla se asignan a las constantes definidas siguiendo la siguiente regla: el primer miembro de la tupla se asigna a la primera constante, el segundo a la segunda, etc.</p>
+<p>En ambos casos, la variable <code class="highlighter-rouge">name</code> durante el resto de la ejecución de nuestro programa, sólo podrá contener <code class="highlighter-rouge">String</code>s.</p>
 
-<p>Usando un guión bajo, podemos ignorar uno o más miembros de la tupla al momento de recuperarlos:</p>
+<p>Una variable en Swift puede ser modificada en tiempo de ejecución, siempre y cuando se respete su tipo.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">let</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">=</span> <span class="n">user</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>     <span class="c1">// #=&gt; 22</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>       <span class="c1">// =&gt; Oscar</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s">"Marco"</span>    <span class="c1">// #=&gt; Ahora name es igual a "Marco"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>       <span class="c1">// =&gt; Marco</span>
+<span class="n">name</span> <span class="o">=</span> <span class="mi">2</span>          <span class="c1">// #=&gt; Error! 2 no un tipo de dato String</span>
 </code></pre>
 </div>
-
-<p>Podemos también hacer referencia a miembros de la tupla sin necesidad de recuperarlos y asignarlos a constantes o variables externas:</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>    <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
-</code></pre>
-</div>
-
-<p>En el ejemplo anterior, <code class="highlighter-rouge">user.0</code> hace referencia al primer miembro de la tupla, <code class="highlighter-rouge">user.1</code> al segundo, y así sucesivamente. Los miembros de las tuplas, al igual que en un Array, están indexados desde el 0. <strong>Solamente ten en cuenta que una tupla no representa una lista de objetos</strong>.</p>
-
-<p>Al igual que con las funciones y sus parámetros etiquetados, podemos poner etiquitas a los miembros de una tupla:</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span> <span class="c1">// =&gt; (.0 "Oscar Swanros", .1 22)</span>
-<span class="n">user</span><span class="o">.</span><span class="n">name</span>      <span class="c1">// =&gt; Oscar Swanros</span>
-<span class="n">user</span><span class="o">.</span><span class="n">age</span>       <span class="c1">// =&gt; 22</span>
-</code></pre>
-</div>
-
-<p>Aunque una tupla no tiene un tipo único en Swift como <code class="highlighter-rouge">Int</code>, <code class="highlighter-rouge">Array</code> o <code class="highlighter-rouge">String</code>, podemos usar las tuplas como cualquier otro tipo de dato en nuestros programas. Incluso como tipo de retorno en funciones:</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">createUser</span><span class="p">(</span><span class="n">name</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">return</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="nf">createUser</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">22</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>   <span class="c1">// #=&gt; Oscar Swanros</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>    <span class="c1">// #=&gt; 22</span>
-</code></pre>
-</div>
-
-<p>Es importante diferenciar las tuplas de los arrays.</p>
-
-<ul>
-  <li><strong>Un array tiene elementos</strong>, puede ser manipulado, escrito y leído.</li>
-  <li><strong>Una tupla tiene miembros</strong>, solamente pueden ser leídos y reemplazados de forma individual, siempre y cuando no se afecte el tipo de dato de la tupla.</li>
-</ul>
 
                         <div class="share uk-text-center">
-    <a href="https://twitter.com/intent/tweet?text=Tuplas&url=https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fintroduccion_al_lenguaje%2Ftuplas%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    <a href="https://twitter.com/intent/tweet?text=Variables&url=https://www.swiftenejemplos.com/docs/variables/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fvariables%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
 </div>
 
                     </div>
@@ -324,28 +299,16 @@
 
   
   
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
     <ul class="uk-pagination uk-margin-top">
           
             
             
-            <li><a class="hvr-back" href="/docs/introduccion_al_lenguaje/funciones/">&larr; Anterior</a></li>
+            <li><a class="hvr-back" href="/docs/tipos_de_datos/">&larr; Anterior</a></li>
           
           
             
             
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/introduccion_al_lenguaje/inferencia_de_tipos/">Siguiente &rarr;</a></li>
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/constantes/">Siguiente &rarr;</a></li>
           
     </ul>
     
@@ -549,6 +512,15 @@
     
 
     
+
+    
+    
+
+    
+
+    
+
+    
     </ul>
 </div>
 
@@ -558,8 +530,8 @@
   <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/';
-      this.page.identifier = 'https://www.swiftenejemplos.com/docs/introduccion_al_lenguaje/tuplas/';
+      this.page.url = 'https://www.swiftenejemplos.com/docs/variables/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/variables/';
     };
 
     (function() {
@@ -602,7 +574,7 @@
             <li><a href="https://www.swiftenejemplos.com/" >Inicio</a></li>
             
                 
-            <li><a href="https://www.swiftenejemplos.com/docs/index" >Ver Ejemplos</a></li>
+            <li><a href="https://www.swiftenejemplos.com/docs/introduccion/" >Ver Ejemplos</a></li>
             
                 
             <li><a href="https://aprendeios.com" target="_blank" >Aprende iOS</a></li>
