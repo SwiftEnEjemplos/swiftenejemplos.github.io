@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Diccionarios | Swift 4 en Ejemplos</title>
+<title>Conformar con Equatable | Swift 4 en Ejemplos</title>
 <meta name="generator" content="Jekyll v3.4.1" />
-<meta property="og:title" content="Diccionarios" />
+<meta property="og:title" content="Conformar con Equatable" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Un diccionario, al igual que un array, es una estructura de datos disponible en la librería estándar de Swift y sirve para almacenar información de manera ordenada." />
-<meta property="og:description" content="Un diccionario, al igual que un array, es una estructura de datos disponible en la librería estándar de Swift y sirve para almacenar información de manera ordenada." />
-<link rel="canonical" href="https://www.swiftenejemplos.com/docs/diccionarios/" />
-<meta property="og:url" content="https://www.swiftenejemplos.com/docs/diccionarios/" />
+<meta name="description" content="Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
+<meta property="og:description" content="Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/" />
 <meta property="og:site_name" content="Swift 4 en Ejemplos" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-16T19:08:08-06:00" />
 <script type="application/ld+json">
-{"description":"Un diccionario, al igual que un array, es una estructura de datos disponible en la librería estándar de Swift y sirve para almacenar información de manera ordenada.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/diccionarios/","headline":"Diccionarios","dateModified":"2018-02-16T19:08:08-06:00","datePublished":"2018-02-16T19:08:08-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/diccionarios/"},"@context":"http://schema.org"}</script>
+{"description":"Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/","headline":"Conformar con Equatable","dateModified":"2018-02-16T19:08:08-06:00","datePublished":"2018-02-16T19:08:08-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -175,7 +175,7 @@
                     
                       
                       
-                      <li class="uk-active"><a href="/docs/diccionarios/">Diccionarios</a></li>
+                      <li class=""><a href="/docs/diccionarios/">Diccionarios</a></li>
                     
                       
                       
@@ -230,7 +230,7 @@
                     
                       
                       
-                      <li class=""><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
+                      <li class="uk-active"><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
                     
                       
                       
@@ -249,7 +249,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Diccionarios</h1>
+                    <h1 class="uk-article-title">Conformar con Equatable</h1>
 
                     
 
@@ -259,55 +259,36 @@
                     </div>
 
                     <div class="article-content">
-                        <p>Un diccionario, al igual que un array, es una estructura de datos disponible en la librería estándar de Swift y sirve para almacenar información de manera ordenada.</p>
+                        <p><code class="highlighter-rouge">Equatable</code> permite que se puedan comparar dos valores (u objetos) utilizando el operador <code class="highlighter-rouge">==</code>.</p>
 
-<p>La gran diferencia entre un diccionario y un array es que a la información del diccionario se accede usando llaves en vez de índices, y el orden de los datos que contiene un diccionario no es relevante.</p>
+<p>Para hacer que un tipo de dato se conforme con <code class="highlighter-rouge">Equatable</code> hay que también asegurarse que se conforme con <code class="highlighter-rouge">Hashable.</code></p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Se declara un diccionario que contiene las calificaciones</span>
-<span class="c1">// de algunos alumnos del salón de clases</span>
-<span class="k">let</span> <span class="nv">schoolGrades</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Double</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
-	<span class="s">"Oscar"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-	<span class="s">"Marco"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
-	<span class="s">"Mariana"</span><span class="p">:</span> <span class="mf">9.5</span>
-<span class="p">]</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">User</span> <span class="p">{</span>
+	<span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">let</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
 
-<span class="c1">// Obtenemos la calificación de Mariana a través de la llave relevante</span>
-<span class="k">let</span> <span class="nv">marianasGrade</span> <span class="o">=</span> <span class="n">schoolGrades</span><span class="p">[</span><span class="s">"Mariana"</span><span class="p">]</span> <span class="c1">// #=&gt; 9.5</span>
+<span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Hashable</span> <span class="p">{</span>
+	<span class="c1">// El valor del hash de tu tipo de dato debe de ser significativo</span>
+	<span class="c1">// y tener algún tipo de certeza que será único. En este ejemplo, </span>
+	<span class="c1">// se usa la combinación del nombre y correo del usuario.</span>
+	<span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="s">"</span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">.</span><span class="se">\(</span><span class="n">email</span><span class="se">)</span><span class="s">"</span><span class="o">.</span><span class="n">hashValue</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Para conformarte con Equatable, solamente hace falta declarar la función </span>
+<span class="c1">// asociada con el operador == que acepte tu tipo de dato.</span>
+<span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">User</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">lhs</span><span class="o">.</span><span class="n">hashValue</span> <span class="o">==</span> <span class="n">rhs</span><span class="o">.</span><span class="n">hashValue</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
-<p>El diccionario declarado en el ejemplo anterior se dice que tiene un tipo de dato <code class="highlighter-rouge">[String : Double]</code>, porque sus llaves (del lado izquierdo) son <code class="highlighter-rouge">String</code> y todos los valores (del lado derecho) son <code class="highlighter-rouge">Double</code>.</p>
-
-<p>Un diccionario, al igual que un array, es una estructura de dato homogénea. Esto significa que el compilador de Swift no permitirá la compilación de un código que intente asignar una llave o valor de tipo diferente al que el diccionario acepta en su declaración, ya sea explícita o <a href="/docs/inferencia_de_tipos">inferida</a>.</p>
-
-<p>Otra diferencia entre un array y un diccionario, es que, mientras que en el caso de un array, si se intenta acceder a un índice mayor al número de elementos que contiene el array se producirá un error de memoria, intentar recuperar un valor asociado con una llave que no existe en un diccionario regresará <code class="highlighter-rouge">nil</code>.</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">nonExistentGrade</span> <span class="o">=</span> <span class="n">schoolGrades</span><span class="p">[</span><span class="s">"Fernando"</span><span class="p">]</span>
-
-<span class="nf">type</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="n">nonExistentGrade</span><span class="p">)</span> <span class="c1">// #=&gt; Optional&lt;Double&gt;</span>
-</code></pre>
-</div>
-
-<p>Utilizando la sintaxis anterior para recuperar un valor asociado con una llave en un diccionario, siempre se obtendrá un opcional de ese valor. Aprende sobre <a href="/docs/opcionales">opcionales aquí</a>.</p>
-
-<p>Para poder modificar un diccionario después de haber sido creado, es necesario que la declaración del mismo indique que es una varible, no una constante:</p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">schoolGrades</span> <span class="o">=</span> <span class="p">[</span>
-	<span class="s">"Oscar"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-	<span class="s">"Marco"</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
-	<span class="s">"Mariana"</span><span class="p">:</span> <span class="mf">9.5</span>
-<span class="p">]</span>
-
-<span class="n">schoolGrades</span><span class="p">[</span><span class="s">"Patricio"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> 	<span class="c1">// Agregar un nuevo valor 10 en la llave "Patricio"</span>
-<span class="n">schoolGrades</span><span class="p">[</span><span class="s">"Oscar"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span> 	<span class="c1">// Eliminar el valor asociado con la llave "Oscar"</span>
-
-<span class="nf">print</span><span class="p">(</span><span class="n">schoolGrades</span><span class="p">)</span> <span class="c1">// #=&gt; ["Marco": 9, "Mariana": 9.5, "Patricio": 10]</span>
-</code></pre>
-</div>
 
                         <div class="share uk-text-center">
-    <a href="https://twitter.com/intent/tweet?text=Diccionarios&url=https://www.swiftenejemplos.com/docs/diccionarios/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fdiccionarios%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    <a href="https://twitter.com/intent/tweet?text=Conformar con Equatable&url=https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Fconformar_equatable%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
 </div>
 
                     </div>
@@ -343,16 +324,46 @@
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="uk-pagination uk-margin-top">
           
             
             
-            <li><a class="hvr-back" href="/docs/arrays/">&larr; Anterior</a></li>
+            <li><a class="hvr-back" href="/docs/estructuras/">&larr; Anterior</a></li>
           
           
             
             
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/funciones/">Siguiente &rarr;</a></li>
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/rads_to_deg/">Siguiente &rarr;</a></li>
           
     </ul>
     
@@ -601,8 +612,8 @@
   <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://www.swiftenejemplos.com/docs/diccionarios/';
-      this.page.identifier = 'https://www.swiftenejemplos.com/docs/diccionarios/';
+      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/';
     };
 
     (function() {
