@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Convertir Radianes a Grados | Swift 4 en Ejemplos</title>
+<title>map | Swift 4 en Ejemplos</title>
 <meta name="generator" content="Jekyll v3.4.1" />
-<meta property="og:title" content="Convertir Radianes a Grados" />
+<meta property="og:title" content="map" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Aunque muchos de los APIs, sobre todo que relacionadas con animaciones, en Swift expresan ángulos en radianes, es mucho más común querer representarlos en grados." />
-<meta property="og:description" content="Aunque muchos de los APIs, sobre todo que relacionadas con animaciones, en Swift expresan ángulos en radianes, es mucho más común querer representarlos en grados." />
-<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/" />
-<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/" />
+<meta name="description" content="map es un concepto heredado de las raíces funcionales de Swift." />
+<meta property="og:description" content="map es un concepto heredado de las raíces funcionales de Swift." />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/map/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/map/" />
 <meta property="og:site_name" content="Swift 4 en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-16T19:08:08-06:00" />
+<meta property="article:published_time" content="2018-02-16T19:29:02-06:00" />
 <script type="application/ld+json">
-{"description":"Aunque muchos de los APIs, sobre todo que relacionadas con animaciones, en Swift expresan ángulos en radianes, es mucho más común querer representarlos en grados.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/","headline":"Convertir Radianes a Grados","dateModified":"2018-02-16T19:08:08-06:00","datePublished":"2018-02-16T19:08:08-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/"},"@context":"http://schema.org"}</script>
+{"description":"map es un concepto heredado de las raíces funcionales de Swift.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/map/","headline":"map","dateModified":"2018-02-16T19:29:02-06:00","datePublished":"2018-02-16T19:29:02-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/map/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -234,11 +234,19 @@
                     
                       
                       
-                      <li class="uk-active"><a href="/docs/ejemplos/rads_to_deg/">Convertir Radianes a Grados</a></li>
+                      <li class=""><a href="/docs/ejemplos/radianes_a_grados/">Convertir Radianes a Grados</a></li>
                     
                       
                       
-                      <li class=""><a href="/docs/ejemplos/deg_to_rads/">Convertir Grados a Radianes</a></li>
+                      <li class=""><a href="/docs/ejemplos/grados_a_radianes/">Convertir Grados a Radianes</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/singleton/">Singletons en Swift</a></li>
+                    
+                      
+                      
+                      <li class="uk-active"><a href="/docs/ejemplos/map/">map</a></li>
                     
                     </ul>
                     
@@ -249,7 +257,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Convertir Radianes a Grados</h1>
+                    <h1 class="uk-article-title">map</h1>
 
                     
 
@@ -259,17 +267,22 @@
                     </div>
 
                     <div class="article-content">
-                        <p>Aunque muchos de los APIs, sobre todo que relacionadas con animaciones, en Swift expresan ángulos en radianes, es mucho más común querer representarlos en grados.</p>
+                        <p><code class="highlighter-rouge">map</code> es un concepto heredado de las raíces funcionales de Swift.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">rad2deg</span><span class="p">(</span><span class="n">_</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">180</span> <span class="o">/</span> <span class="o">.</span><span class="n">pi</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"oscar"</span><span class="p">,</span> <span class="s">"yuridia"</span><span class="p">,</span> <span class="s">"margo"</span><span class="p">,</span> <span class="s">"steve"</span><span class="p">]</span>
+<span class="k">let</span> <span class="nv">capitalized</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="n">name</span><span class="o">.</span><span class="n">capitalized</span>
 <span class="p">}</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">capitalized</span><span class="p">)</span> <span class="c1">// #=&gt; ["Oscar", "Yuridia", "Margo", "Steve"]</span>
 </code></pre>
 </div>
 
+<p><code class="highlighter-rouge">map</code> actúa sobre una secuencia de datos, tomando como parámetro una función que es aplicada a cada uno de los elementos de la secuencia original. El resultado de <code class="highlighter-rouge">map</code> es una nueva secuencia de elementos a los que ya se les aplicó la función parámetro.</p>
+
                         <div class="share uk-text-center">
-    <a href="https://twitter.com/intent/tweet?text=Convertir Radianes a Grados&url=https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Frads_to_deg%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    <a href="https://twitter.com/intent/tweet?text=map&url=https://www.swiftenejemplos.com/docs/ejemplos/map/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Fmap%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
 </div>
 
                     </div>
@@ -338,16 +351,23 @@
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="uk-pagination uk-margin-top">
           
             
             
-            <li><a class="hvr-back" href="/docs/ejemplos/conformar_equatable/">&larr; Anterior</a></li>
+            <li><a class="hvr-back" href="/docs/ejemplos/singleton/">&larr; Anterior</a></li>
           
           
-            
-            
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/deg_to_rads/">Siguiente &rarr;</a></li>
+
           
     </ul>
     
@@ -587,6 +607,33 @@
     
 
     
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
     </ul>
 </div>
 
@@ -596,8 +643,8 @@
   <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/';
-      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/rads_to_deg/';
+      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/map/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/map/';
     };
 
     (function() {
