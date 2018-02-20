@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Convertir Grados a Radianes | Swift 4 en Ejemplos</title>
+<title>Filtrar Array | Swift 4 en Ejemplos</title>
 <meta name="generator" content="Jekyll v3.4.1" />
-<meta property="og:title" content="Convertir Grados a Radianes" />
+<meta property="og:title" content="Filtrar Array" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Cuando trabajas con APIs, sobre todo que tienen que ver con animaciones o gráficos, es común que los grados se tengan que representar como radianes. Para eso, utiliza la siguiente función:" />
-<meta property="og:description" content="Cuando trabajas con APIs, sobre todo que tienen que ver con animaciones o gráficos, es común que los grados se tengan que representar como radianes. Para eso, utiliza la siguiente función:" />
-<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/" />
-<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/" />
+<meta name="description" content="Cuando se tene un Array de algún tipo de dato, se puede filtrar la colección para obtener solamente los elementos dentro de la misma que cumplan con algún criterio." />
+<meta property="og:description" content="Cuando se tene un Array de algún tipo de dato, se puede filtrar la colección para obtener solamente los elementos dentro de la misma que cumplan con algún criterio." />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/" />
 <meta property="og:site_name" content="Swift 4 en Ejemplos" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-20T15:41:37-06:00" />
 <script type="application/ld+json">
-{"description":"Cuando trabajas con APIs, sobre todo que tienen que ver con animaciones o gráficos, es común que los grados se tengan que representar como radianes. Para eso, utiliza la siguiente función:","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/","headline":"Convertir Grados a Radianes","dateModified":"2018-02-20T15:41:37-06:00","datePublished":"2018-02-20T15:41:37-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/"},"@context":"http://schema.org"}</script>
+{"description":"Cuando se tene un Array de algún tipo de dato, se puede filtrar la colección para obtener solamente los elementos dentro de la misma que cumplan con algún criterio.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/","headline":"Filtrar Array","dateModified":"2018-02-20T15:41:37-06:00","datePublished":"2018-02-20T15:41:37-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -250,7 +250,7 @@
                     
                       
                       
-                      <li class="uk-active"><a href="/docs/ejemplos/grados_a_radianes/">Convertir Grados a Radianes</a></li>
+                      <li class=""><a href="/docs/ejemplos/grados_a_radianes/">Convertir Grados a Radianes</a></li>
                     
                       
                       
@@ -258,7 +258,7 @@
                     
                       
                       
-                      <li class=""><a href="/docs/ejemplos/filtrar_array/">Filtrar Array</a></li>
+                      <li class="uk-active"><a href="/docs/ejemplos/filtrar_array/">Filtrar Array</a></li>
                     
                       
                       
@@ -273,7 +273,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Convertir Grados a Radianes</h1>
+                    <h1 class="uk-article-title">Filtrar Array</h1>
 
                     
 
@@ -283,17 +283,61 @@
                     </div>
 
                     <div class="article-content">
-                        <p>Cuando trabajas con APIs, sobre todo que tienen que ver con animaciones o gráficos, es común que los grados se tengan que representar como radianes. Para eso, utiliza la siguiente función:</p>
+                        <p>Cuando se tene un <code class="highlighter-rouge">Array</code> de algún tipo de dato, se puede filtrar la colección para obtener solamente los elementos dentro de la misma que cumplan con algún criterio.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">deg2rad</span><span class="p">(</span><span class="n">_</span> <span class="nv">number</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">User</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
 <span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">users</span><span class="p">:</span> <span class="p">[</span><span class="kt">User</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">24</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Marco"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">12</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Mariana"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">21</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Omar"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">38</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Sergio"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Matt"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">22</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Louie"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">56</span><span class="p">),</span>
+    <span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Diana"</span><span class="p">,</span> <span class="nv">age</span><span class="p">:</span> <span class="mi">18</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="k">let</span> <span class="nv">namesStartingWithM</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">filter</span> <span class="p">{</span> <span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="nf">hasPrefix</span><span class="p">(</span><span class="s">"M"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// #=&gt; [{name "Marco"}, {name "Mariana"}, {name "Matt"}]</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior, se utiliza la función <code class="highlighter-rouge">filter(isIncluded: (Element) throws -&gt; Bool)</code> para obtener nada más los usuarios cuyos nombres comienzan con la letra “M”.</p>
+
+<p>Puesto que <code class="highlighter-rouge">filter(isIncluded:)</code> recibe una función que determinará el criterio con el que se discriminarán los objetos de la colección, se puede hacer cualquier cosa para determinar qué se busca obtener.</p>
+
+<p>El siguiente ejemplo, se obtienen solamente los usuarios con mayoría de edad para poder beber en Estados Unidos.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">usersThatCanDrink</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">filter</span> <span class="p">{</span> <span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">in</span>
+    <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">21</span>
+<span class="p">}</span>
+
+<span class="c1">// #=&gt; [{name "Oscar", age 24}, {name "Omar", age 38}, {name "Sergio", age 26}, {name "Matt", age 22}, {name "Louie", age 56}]</span>
+</code></pre>
+</div>
+
+<p>El ejemplo anterior se puede refactorizar al encapsular la lógica de discriminación en una función externa, y pasar dicha función como parámetro a <code class="highlighter-rouge">filter(isIncluded:)</code>:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">canDrink</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">21</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">usersThatCanDrink</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="nf">filter</span><span class="p">(</span><span class="nf">canDrink</span><span class="p">(</span><span class="nv">user</span><span class="p">:))</span>
+
+<span class="c1">// #=&gt; [{name "Oscar", age 24}, {name "Omar", age 38}, {name "Sergio", age 26}, {name "Matt", age 22}, {name "Louie", age 56}]</span>
 </code></pre>
 </div>
 
                         <div class="share uk-text-center">
-    <a href="https://twitter.com/intent/tweet?text=Convertir Grados a Radianes&url=https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Fgrados_a_radianes%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    <a href="https://twitter.com/intent/tweet?text=Filtrar Array&url=https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Ffiltrar_array%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
 </div>
 
                     </div>
@@ -374,16 +418,22 @@
 
   
   
+
+  
+  
+
+  
+  
     <ul class="uk-pagination uk-margin-top">
           
             
             
-            <li><a class="hvr-back" href="/docs/ejemplos/radianes_a_grados/">&larr; Anterior</a></li>
+            <li><a class="hvr-back" href="/docs/ejemplos/singleton/">&larr; Anterior</a></li>
           
           
             
             
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/singleton/">Siguiente &rarr;</a></li>
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/map/">Siguiente &rarr;</a></li>
           
     </ul>
     
@@ -450,70 +500,7 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/docs/ejemplos/radianes_a_grados/">Convertir Radianes a Grados</a></li>
+        <li><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
         
         
     
@@ -526,9 +513,76 @@
     
 
     
-        <li><a href="/docs/ejemplos/singleton/">Singletons en Swift</a></li>
+        <li><a href="/docs/ejemplos/conformar_hashable/">Conformar con Hashable</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/ejemplos/crear_subclase/">Crear una Subclase</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -703,8 +757,8 @@
   <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/';
-      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/grados_a_radianes/';
+      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/filtrar_array/';
     };
 
     (function() {
