@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>flatMap | Swift 4 en Ejemplos</title>
+<title>Crear una Subclase | Swift 4 en Ejemplos</title>
 <meta name="generator" content="Jekyll v3.4.1" />
-<meta property="og:title" content="flatMap" />
+<meta property="og:title" content="Crear una Subclase" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="flatMap es un concepto heredado de las raíces funcionales de Swift." />
-<meta property="og:description" content="flatMap es un concepto heredado de las raíces funcionales de Swift." />
-<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/flatmap/" />
-<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/flatmap/" />
+<meta name="description" content="Swift también puede ser tratado como un lenguaje orientado a objetos. Por lo tanto, también se pueden crear subclases." />
+<meta property="og:description" content="Swift también puede ser tratado como un lenguaje orientado a objetos. Por lo tanto, también se pueden crear subclases." />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/" />
 <meta property="og:site_name" content="Swift 4 en Ejemplos" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-20T11:47:56-06:00" />
 <script type="application/ld+json">
-{"description":"flatMap es un concepto heredado de las raíces funcionales de Swift.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/flatmap/","headline":"flatMap","dateModified":"2018-02-20T11:47:56-06:00","datePublished":"2018-02-20T11:47:56-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/flatmap/"},"@context":"http://schema.org"}</script>
+{"description":"Swift también puede ser tratado como un lenguaje orientado a objetos. Por lo tanto, también se pueden crear subclases.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/","headline":"Crear una Subclase","dateModified":"2018-02-20T11:47:56-06:00","datePublished":"2018-02-20T11:47:56-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -234,7 +234,7 @@
                     
                       
                       
-                      <li class=""><a href="/docs/ejemplos/crear_subclase/">Crear una Subclase</a></li>
+                      <li class="uk-active"><a href="/docs/ejemplos/crear_subclase/">Crear una Subclase</a></li>
                     
                       
                       
@@ -269,7 +269,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">flatMap</h1>
+                    <h1 class="uk-article-title">Crear una Subclase</h1>
 
                     
 
@@ -279,15 +279,36 @@
                     </div>
 
                     <div class="article-content">
-                        <p><code class="highlighter-rouge">flatMap</code> es un concepto heredado de las raíces funcionales de Swift.</p>
+                        <p>Swift también puede ser tratado como un lenguaje orientado a objetos. Por lo tanto, también se pueden crear subclases.</p>
 
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="n">l</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Se declara la clase base</span>
+<span class="kd">class</span> <span class="kt">Animal</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">Family</span>
+    <span class="k">var</span> <span class="nv">species</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">family</span><span class="p">:</span> <span class="kt">Family</span><span class="p">,</span> <span class="nv">species</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="n">family</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Un Tiger es una especialización de un Animal, y hereda todas</span>
+<span class="c1">// sus propiedades.</span>
+<span class="kd">class</span> <span class="kt">Tiger</span><span class="p">:</span> <span class="kt">Animal</span> <span class="p">{</span>
+    <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">family</span><span class="p">:</span> <span class="o">.</span><span class="n">felidae</span><span class="p">,</span> <span class="nv">species</span><span class="p">:</span> <span class="s">"Panthera tigris"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">let</span> <span class="nv">tiger</span> <span class="o">=</span> <span class="kt">Tiger</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">tiger</span><span class="o">.</span><span class="n">species</span><span class="p">)</span> <span class="c1">// #=&gt; "Panthera tigris"</span>
 </code></pre>
 </div>
 
                         <div class="share uk-text-center">
-    <a href="https://twitter.com/intent/tweet?text=flatMap&url=https://www.swiftenejemplos.com/docs/ejemplos/flatmap/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
-    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Fflatmap%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    <a href="https://twitter.com/intent/tweet?text=Crear una Subclase&url=https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fejemplos%2Fcrear_subclase%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
 </div>
 
                     </div>
@@ -356,25 +377,19 @@
 
   
   
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
+    <ul class="uk-pagination uk-margin-top">
+          
+            
+            
+            <li><a class="hvr-back" href="/docs/propiedades/">&larr; Anterior</a></li>
+          
+          
+            
+            
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/conformar_hashable/">Siguiente &rarr;</a></li>
+          
+    </ul>
+    
 
 
                     <div class="uk-margin-large-top">
@@ -438,6 +453,23 @@
     
 
     
+        <li><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/ejemplos/conformar_hashable/">Conformar con Hashable</a></li>
+        
+        
+    
 
     
 
@@ -474,14 +506,9 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
+        <li><a href="/docs/ejemplos/map/">map</a></li>
+        
+        
     
 
     
@@ -674,8 +701,8 @@
   <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/flatmap/';
-      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/flatmap/';
+      this.page.url = 'https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/ejemplos/crear_subclase/';
     };
 
     (function() {

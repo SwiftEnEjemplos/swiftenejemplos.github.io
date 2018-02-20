@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Propiedades | Swift 4 en Ejemplos</title>
+<meta name="generator" content="Jekyll v3.4.1" />
+<meta property="og:title" content="Propiedades" />
+<meta name="author" content="Oscar Swanros" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Contenido" />
+<meta property="og:description" content="Contenido" />
+<link rel="canonical" href="https://www.swiftenejemplos.com/docs/propiedades/" />
+<meta property="og:url" content="https://www.swiftenejemplos.com/docs/propiedades/" />
+<meta property="og:site_name" content="Swift 4 en Ejemplos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-20T11:47:56-06:00" />
+<script type="application/ld+json">
+{"description":"Contenido","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/propiedades/","headline":"Propiedades","dateModified":"2018-02-20T11:47:56-06:00","datePublished":"2018-02-20T11:47:56-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/propiedades/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="Swift 4 en Ejemplos" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58608125-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+
+  
+</head>
+
+
+    <body>
+
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+            <a class="uk-navbar-item uk-logo" href="/"><img src="https://www.swiftenejemplos.com/assets/posts/logo.svg" alt="Swift en Ejemplos"></a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="/" >Inicio</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/docs/introduccion/" >Ver Ejemplos</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="https://aprendeios.com" target="_blank" >Aprende iOS</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/blog/" >Blog</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/acerca-de/" >Acerca De</a></li>
+                    
+                
+                <li><a>Versión: Swift 4</a></li>
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Buscar..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No se encontraron resultados</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+                <div class="sidebar-docs uk-position-fixed">
+                    
+                    <h5></h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/introduccion/">Introducción</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/como_usar_este_libro/">Cómo usar este libro</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/primeros_pasos/">Primeros pasos</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Swift Básico</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/hola_mundo/">Hola mundo!</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/tipos_de_datos/">Tipos de Datos en Swift</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/variables/">Variables</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/constantes/">Constantes</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/arrays/">Arrays</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/diccionarios/">Diccionarios</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/funciones/">Funciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/tuplas/">Tuplas</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/inferencia_de_tipos/">Inferencia de Tipos de Datos</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/opcionales/">Valores Opcionales</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Control de Flujo</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ifelse/">if / else</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/guard/">guard</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/where/">where</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Estruturas de Datos</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/enumeraciones/">Enumeraciones</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/estructuras/">Estructuras</a></li>
+                    
+                      
+                      
+                      <li class="uk-active"><a href="/docs/propiedades/">Propiedades</a></li>
+                    
+                    </ul>
+                    
+                    <h5>Ejemplos Prácticos</h5>
+                    <ul class="uk-nav uk-nav-default doc-nav">
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/crear_subclase/">Crear una Subclase</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/conformar_hashable/">Conformar con Hashable</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/radianes_a_grados/">Convertir Radianes a Grados</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/grados_a_radianes/">Convertir Grados a Radianes</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/singleton/">Singletons en Swift</a></li>
+                    
+                      
+                      
+                      <li class=""><a href="/docs/ejemplos/map/">map</a></li>
+                    
+                    </ul>
+                    
+                </div>
+            </div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Propiedades</h1>
+
+                    
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+                    </div>
+
+                    <div class="article-content">
+                        <h2 class="no_toc" id="contenido">Contenido</h2>
+<ul id="markdown-toc">
+  <li><a href="#tipos-de-propiedades" id="markdown-toc-tipos-de-propiedades">Tipos de propiedades</a>    <ul>
+      <li><a href="#almacenadas-stored-properties" id="markdown-toc-almacenadas-stored-properties">Almacenadas (stored properties)</a></li>
+      <li><a href="#computadas-computed-properties" id="markdown-toc-computadas-computed-properties">Computadas (computed properties)</a></li>
+    </ul>
+  </li>
+  <li><a href="#inicializando-propiedades" id="markdown-toc-inicializando-propiedades">Inicializando propiedades</a>    <ul>
+      <li><a href="#clases" id="markdown-toc-clases">Clases</a>        <ul>
+          <li><a href="#propiedades-en-subclases" id="markdown-toc-propiedades-en-subclases">Propiedades en Subclases</a></li>
+        </ul>
+      </li>
+      <li><a href="#estructuras" id="markdown-toc-estructuras">Estructuras</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Cuando un tipo de dato declara variables o constantes dentro de su mismo contexto, a éstas se les conocen como propiedades, no como variables.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">User</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">var</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span>
+
+	<span class="nf">init</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>En el ejemplo anterior, una clase <code class="highlighter-rouge">User</code> tiene dos propiedades: <code class="highlighter-rouge">name</code> y <code class="highlighter-rouge">email</code>, ambas de tipo <code class="highlighter-rouge">String</code>. Una propiedad contiene información estructurada relacionada con el tipo de dato que la almacena.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">oscar</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Oscar Swanros"</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="s">"oscar@swanros.com"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">oscar</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="c1">// #=&gt; "Oscar Swanros"</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">oscar</span><span class="o">.</span><span class="n">email</span><span class="p">)</span> <span class="c1">// #=&gt; "oscar@swanros.com"</span>
+</code></pre>
+</div>
+
+<h2 id="tipos-de-propiedades">Tipos de propiedades</h2>
+
+<h4 id="almacenadas-stored-properties">Almacenadas (stored properties)</h4>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Location</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span>
+	<span class="k">var</span> <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span>
+	
+	<span class="nf">init</span><span class="p">(</span><span class="nv">lat</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">long</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">lat</span> <span class="o">=</span> <span class="n">lat</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">long</span> <span class="o">=</span> <span class="n">long</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Se le conoce como “propiedad almacenada” (stored property) a aquella propiedad que va a contener un valor. Este es un tipo de propiedades bastante común, y seguramente el que se usará el 90% de las veces que se desee trabajar con propiedades.</p>
+
+<h4 id="computadas-computed-properties">Computadas (computed properties)</h4>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">User</span> <span class="p">{</span>
+	<span class="k">let</span> <span class="nv">firstName</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">let</span> <span class="nv">lastName</span><span class="p">:</span> <span class="kt">String</span>
+	
+	<span class="k">var</span> <span class="nv">fullName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="s">"</span><span class="se">\(</span><span class="n">firstName</span><span class="se">)</span><span class="s"> </span><span class="se">\(</span><span class="n">lastName</span><span class="se">)</span><span class="s">"</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="k">let</span> <span class="nv">oscar</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="nv">firstName</span><span class="p">:</span> <span class="s">"Oscar"</span><span class="p">,</span> <span class="nv">lastName</span><span class="p">:</span> <span class="s">"Swanros"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">oscar</span><span class="o">.</span><span class="n">fullName</span><span class="p">)</span> <span class="c1">// #=&gt; "Oscar Swanros"</span>
+</code></pre>
+</div>
+
+<p>Una propiedad computada no almacena valor alguno. El valor que se obtiene al consultar una propiedad computada es calculado en el momento y no se almacena por la instancia misma. Las propiedades computadas, siempre tienen que ser declaradas como <code class="highlighter-rouge">var</code>, no <code class="highlighter-rouge">let</code>.</p>
+
+<p>Aunque técnicamente una propiedad computada puede comportarse como una función, no se aconseja que se empleen como funciones.</p>
+
+<h2 id="inicializando-propiedades">Inicializando propiedades</h2>
+
+<p>Hay una serie de reglas que se deben de cumplir cuando se trabaja con propiedades, ya sea para clases o para estructuras de Swift.</p>
+
+<h4 id="clases">Clases</h4>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Email</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">var</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>El ejemplo anterior, aunque semánticamente correcto, retornará un error al momento de querer ser compilado, con el mensaje “Class Email has no initializers.”</p>
+
+<p>Una clase debe de tener valores asignados a todas sus propiedades antes de terminar su inicialización. El error del ejemplo previo se puede resolver de dos formas:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Forma 1: agregando valores por defecto</span>
+
+<span class="kd">class</span> <span class="kt">Email</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+	<span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+	<span class="k">var</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Al agregar valores por defecto a cada una de las propiedades, se cumple la regla. Aunque esta solución es técnicamente válida, puede que no sea la mejor forma de resolver el problema, puesto que no garantiza la integridad de una instancia de <code class="highlighter-rouge">Email</code>, ya que se pueden crear instancias de este tipo de dato que no contengan la información necesaria para que la misma sea considerada “válida”.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Forma 2: declarando un inicializador</span>
+
+<span class="kd">class</span> <span class="kt">Email</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">var</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span>
+	<span class="k">var</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span>
+		
+	<span class="nf">init</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">from</span> <span class="o">=</span> <span class="n">from</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">to</span> <span class="o">=</span> <span class="n">to</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="n">subject</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Al declarar un inicializador para la clase <code class="highlighter-rouge">Email</code>, la integridad de las instancias de esta clase está garantizada puesto que usando esta técnica no puede haber instancias de <code class="highlighter-rouge">Email</code> que no contengan los 3 valores necesarios para hacer que un <code class="highlighter-rouge">Email</code> sea “válido”.</p>
+
+<h5 id="propiedades-en-subclases">Propiedades en Subclases</h5>
+
+<p>Si se está trabajando con una subclase, la subclase debe de asegurarse de que todas las propiedades de la subclase que no estén en la superclase sean inicializadas antes de inicializar la superclase.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">Animal</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">family</span><span class="p">:</span> <span class="kt">Family</span>
+    <span class="k">var</span> <span class="nv">species</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">family</span><span class="p">:</span> <span class="kt">Family</span><span class="p">,</span> <span class="nv">species</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">family</span> <span class="o">=</span> <span class="n">family</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">Tiger</span><span class="p">:</span> <span class="kt">Animal</span> <span class="p">{</span>
+	<span class="k">var</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
+	
+    <span class="nf">init</span><span class="p">(</span><span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+	    <span class="c1">// Inicializar age antes de seguir con la inicialización de la</span>
+	    <span class="c1">// superclase</span>
+		<span class="k">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span> 
+		
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">family</span><span class="p">:</span> <span class="o">.</span><span class="n">felidae</span><span class="p">,</span> <span class="nv">species</span><span class="p">:</span> <span class="s">"Panthera tigris"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Si la superclase cuenta con propiedades computadas, se puede sobreescribir el comportamiento de dichas propiedades computadas usando la palabra reservada <code class="highlighter-rouge">override</code>:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="kt">StoreItem</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">price</span><span class="p">:</span> <span class="kt">Double</span>
+    <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    
+    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"</span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s"> costs $</span><span class="se">\(</span><span class="n">price</span><span class="se">)</span><span class="s">USD"</span>
+    <span class="p">}</span>
+    
+    <span class="nf">init</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">Cup</span><span class="p">:</span> <span class="kt">StoreItem</span> <span class="p">{</span>
+	<span class="c1">// Sobreescribir el comportamiento de la propiedad computada `description`</span>
+	<span class="c1">// de la superclase StoreItem.</span>
+    <span class="k">override</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"</span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s"> is worth </span><span class="se">\(</span><span class="n">price</span><span class="se">)</span><span class="s"> dollars."</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="kt">StoreItem</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Cup"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">cup</span> <span class="o">=</span> <span class="kt">Cup</span><span class="p">(</span><span class="nv">price</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="s">"Cup"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">description</span><span class="p">)</span> <span class="c1">// #=&gt; Cup costs $12.0USD</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">cup</span><span class="o">.</span><span class="n">description</span><span class="p">)</span> 	<span class="c1">// #=&gt; Cup is worth 12.0 dollars.</span>
+</code></pre>
+</div>
+
+<h4 id="estructuras">Estructuras</h4>
+
+<p>Una estructura sigue reglas bastante parecidas a las clases cuando se trata de manejar propiedades.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Book</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">author</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">numberOfPages</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="k">let</span> <span class="nv">editorial</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>El ejemplo anterior declara una estructura <code class="highlighter-rouge">Book</code> sin inicializadores ni valores por defecto para cada una de sus propiedades. Dentro del contexto donde la estructura fue declarada, Swift sintetiza inicializadores con cada uno de sus propiedades automáticamente.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">book</span> <span class="o">=</span> <span class="kt">Book</span><span class="p">(</span><span class="nv">author</span><span class="p">:</span> <span class="s">"J. R. R. Tolkien"</span><span class="p">,</span> <span class="nv">numberOfPages</span><span class="p">:</span> <span class="mi">580</span><span class="p">,</span> <span class="nv">editorial</span><span class="p">:</span> <span class="s">"Cool Books Inc."</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Si a alguna de las propiedades de la estructura se le asigna un valor por defecto, esa propiedad será omitida del inicializador sintetizado automáticamente por Swift:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">Book</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">author</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">numberOfPages</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="k">let</span> <span class="nv">editorial</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Cool Books Inc."</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">book</span> <span class="o">=</span> <span class="kt">Book</span><span class="p">(</span><span class="nv">author</span><span class="p">:</span> <span class="s">"Sam Navajo"</span><span class="p">,</span> <span class="nv">numberOfPages</span><span class="p">:</span> <span class="mi">320</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Cuando todas las propiedades de una estructura tienen valores por default, se omiten todos los parámetros del inicializador.</p>
+
+
+                        <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Propiedades&url=https://www.swiftenejemplos.com/docs/propiedades/&via=Swanros&related=Swanros" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.swiftenejemplos.com%2Fdocs%2Fpropiedades%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <ul class="uk-pagination uk-margin-top">
+          
+            
+            
+            <li><a class="hvr-back" href="/docs/estructuras/">&larr; Anterior</a></li>
+          
+          
+            
+            
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/crear_subclase/">Siguiente &rarr;</a></li>
+          
+    </ul>
+    
+
+
+                    <div class="uk-margin-large-top">
+    <h3>Relacionados</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+                     
+
+  <div id="disqus_thread" class="uk-margin-xlarge-top"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://www.swiftenejemplos.com/docs/propiedades/';
+      this.page.identifier = 'https://www.swiftenejemplos.com/docs/propiedades/';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://swiftenejemplos.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+ 
+                </article>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"><img src="https://www.swiftenejemplos.com/assets/posts/logo.svg" alt="Swift en Ejemplos"></a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/" >Inicio</a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/docs/introduccion/" >Ver Ejemplos</a></li>
+            
+                
+            <li><a href="https://aprendeios.com" target="_blank" >Aprende iOS</a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/blog/" >Blog</a></li>
+            
+                
+            <li><a href="https://www.swiftenejemplos.com/acerca-de/" >Acerca De</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>
