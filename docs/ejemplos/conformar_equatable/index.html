@@ -11,15 +11,15 @@
 <meta property="og:title" content="Conformar con Equatable" />
 <meta name="author" content="Oscar Swanros" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
-<meta property="og:description" content="Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
+<meta name="description" content="El protocolo Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
+<meta property="og:description" content="El protocolo Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==." />
 <link rel="canonical" href="https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/" />
 <meta property="og:url" content="https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/" />
 <meta property="og:site_name" content="Swift 4 en Ejemplos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-20T11:47:56-06:00" />
+<meta property="article:published_time" content="2018-02-20T15:16:09-06:00" />
 <script type="application/ld+json">
-{"description":"Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/","headline":"Conformar con Equatable","dateModified":"2018-02-20T11:47:56-06:00","datePublished":"2018-02-20T11:47:56-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/"},"@context":"http://schema.org"}</script>
+{"description":"El protocolo Equatable permite que se puedan comparar dos valores (u objetos) utilizando el operador ==.","author":{"@type":"Person","name":"Oscar Swanros"},"@type":"BlogPosting","url":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/","headline":"Conformar con Equatable","dateModified":"2018-02-20T15:16:09-06:00","datePublished":"2018-02-20T15:16:09-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.swiftenejemplos.com/docs/ejemplos/conformar_equatable/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://www.swiftenejemplos.com/assets/posts/logo.svg"/>
@@ -238,11 +238,11 @@
                     
                       
                       
-                      <li class=""><a href="/docs/ejemplos/conformar_hashable/">Conformar con Hashable</a></li>
+                      <li class="uk-active"><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
                     
                       
                       
-                      <li class="uk-active"><a href="/docs/ejemplos/conformar_equatable/">Conformar con Equatable</a></li>
+                      <li class=""><a href="/docs/ejemplos/conformar_hashable/">Conformar con Hashable</a></li>
                     
                       
                       
@@ -279,28 +279,16 @@
                     </div>
 
                     <div class="article-content">
-                        <p><code class="highlighter-rouge">Equatable</code> permite que se puedan comparar dos valores (u objetos) utilizando el operador <code class="highlighter-rouge">==</code>.</p>
+                        <p>El protocolo <code class="highlighter-rouge">Equatable</code> permite que se puedan comparar dos valores (u objetos) utilizando el operador <code class="highlighter-rouge">==</code>.</p>
 
-<p>Para hacer que un tipo de dato se conforme con <code class="highlighter-rouge">Equatable</code> hay que también asegurarse que se conforme con <code class="highlighter-rouge">Hashable.</code></p>
-
-<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">User</span> <span class="p">{</span>
-	<span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
-	<span class="k">let</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span>
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Equatable</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
 <span class="p">}</span>
 
-<span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">Hashable</span> <span class="p">{</span>
-	<span class="c1">// El valor del hash de tu tipo de dato debe de ser significativo</span>
-	<span class="c1">// y tener algún tipo de certeza que será único. En este ejemplo, </span>
-	<span class="c1">// se usa la combinación del nombre y correo del usuario.</span>
-	<span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
-		<span class="k">return</span> <span class="s">"</span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">.</span><span class="se">\(</span><span class="n">email</span><span class="se">)</span><span class="s">"</span><span class="o">.</span><span class="n">hashValue</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Para conformarte con Equatable, solamente hace falta declarar la función </span>
+<span class="c1">// Para conformarte con Equatable, solamente hace falta declarar la función</span>
 <span class="c1">// asociada con el operador == que acepte tu tipo de dato.</span>
 <span class="kd">func</span> <span class="o">==</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">User</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
-	<span class="k">return</span> <span class="n">lhs</span><span class="o">.</span><span class="n">hashValue</span> <span class="o">==</span> <span class="n">rhs</span><span class="o">.</span><span class="n">hashValue</span>
+    <span class="k">return</span> <span class="n">lhs</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">rhs</span><span class="o">.</span><span class="n">name</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -380,19 +368,16 @@
 
   
   
-
-  
-  
     <ul class="uk-pagination uk-margin-top">
           
             
             
-            <li><a class="hvr-back" href="/docs/ejemplos/conformar_hashable/">&larr; Anterior</a></li>
+            <li><a class="hvr-back" href="/docs/ejemplos/crear_subclase/">&larr; Anterior</a></li>
           
           
             
             
-            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/radianes_a_grados/">Siguiente &rarr;</a></li>
+            <li class="uk-margin-auto-left"><a class="hvr-forward" href="/docs/ejemplos/conformar_hashable/">Siguiente &rarr;</a></li>
           
     </ul>
     
